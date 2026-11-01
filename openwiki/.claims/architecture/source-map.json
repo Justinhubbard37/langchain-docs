@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:11667e57e3961b9096194c7eb536d77f992239e1f8ffa9d2442e7b826a6605ac",
+  "pageVersion": "sha256:42139f8f5c4996b8d756e6c643c012917eecad2bb636aefc70d03bd236648041",
   "claims": [
     {
       "id": "claim_5a0048f3b3ca4390bc60a9abdcb5e5d2",
@@ -12,7 +12,7 @@
         },
         {
           "resource": "repo://src/docs.json",
-          "version": "repo-file-v1:sha256:6155cf3b0a22adb1cb31bd47a6f1e5681a0c221dcfc0d12ca4ed6f3b19772bef"
+          "version": "repo-file-v1:sha256:86bb519e1b10e669379a414192d3de3f34a135fc776d3c2409d6f72073012654"
         }
       ]
     },
@@ -58,11 +58,11 @@
       "evidence": [
         {
           "resource": "repo://AGENTS.md",
-          "version": "repo-file-v1:sha256:a151a8769ebfcf66e2d6eefceb89032adf48e2533818a5aca0290c6359bac142"
+          "version": "repo-file-v1:sha256:1b9b14a1011657e70ab3a492d0a277a7a40060d2893fc19951960a6ecd0294fc"
         },
         {
           "resource": "repo://src/docs.json",
-          "version": "repo-file-v1:sha256:6155cf3b0a22adb1cb31bd47a6f1e5681a0c221dcfc0d12ca4ed6f3b19772bef"
+          "version": "repo-file-v1:sha256:86bb519e1b10e669379a414192d3de3f34a135fc776d3c2409d6f72073012654"
         }
       ]
     },
@@ -395,10 +395,68 @@
           "version": "repo-lines-v1:sha256:d62c25941d3caeba656d25de7218aa80c41eda5dceda196ea415cd5b0d731a1b:eyJzZWxlY3RlZExpbmVDb3VudCI6NzksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhMzhlM2EzOWEwMmVlYWI2NWIwMGVjNDhiNzc2MTBhMmU5NjM1ODJkNmQ2NzZiYTdiOWEyMTFiNDVkNzM2YmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFmMGNkYjk3MmE3YmZiN2VkMjQ2ZjlmZjY3MjM4NWU1NWY0OTY4ZmMxMTA0M2RjNWI2ODRkNTFkZmEzMWRiY2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA5ZjkzMDgzYzE5NzEyMWI5ODI3MDBiYThhZmFiZDE3MjJjZjFkM2U3NDA0NTA5ZTgwZWZhMjcyNDdmNjJmMDcifQ"
         }
       ]
+    },
+    {
+      "id": "claim_ce0679ba26374cbbbdc1791681d96de8",
+      "statement": "`scripts/generate_egress_ip_tables.py` treats `src/langsmith/egress-ip-addresses.json` as the source of truth for the two egress tables: it validates a versioned inventory of unique public IPv4 `/32` entries scoped by service, cloud, and region, derives a SHA-256 version, and fails `--check` when either generated table or the version is stale.",
+      "evidence": [
+        {
+          "resource": "repo://scripts/generate_egress_ip_tables.py#L13-L105",
+          "version": "repo-lines-v1:sha256:47e07e56b5d0e27b4dd2f1dad626a4a8c7f00fd2fb33e87f26c78ff007d5ddc8:eyJzZWxlY3RlZExpbmVDb3VudCI6OTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZjMGNhZjQ0MWExYWFkMjI0MGU3YWFjY2JiMmE3MzkxNWZjNWNlNjJhOTBlYjg1NzgzNmQ5MDVjNjg3NjBjN2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxYThmMjE0MzVhOWU5YTYwN2NhOWVlMGE0MGYzMDUyNzE4ZmEzMGQ4ZjFkZGIzM2M2Y2Q5OTk1ODkwMmE0MzAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE0MDFkZjE5ZWI4OTUzMDY1YTdmOWNkMmVkNTRjOTg4ODRlY2FjZmNlYzA5ZTE1ZWNjMjE5Y2RjMGM1YTVlNTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImIzZGYyYWNmMDZlOGMzZjAzYzcxMzVjNmU4YWM1YTljYTU0MzJhYmUwNmE3NGFjYTBmZGQ5YTUzYTAwOGY5ODcifQ"
+        },
+        {
+          "resource": "repo://tests/unit_tests/test_egress_ip_inventory.py#L21-L77",
+          "version": "repo-lines-v1:sha256:025ca02f39c7f51d35741b0cac757a838d1cbe6960dbf1790a6364d6b7aefad2:eyJzZWxlY3RlZExpbmVDb3VudCI6NTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQzYTlkMTg3N2E3MjA2ZTBiMmQwMGU2ZjY1YjVkY2NkZDNkYzQ5NGQwYzcwYTM4MGFmZGE5YTg0NzFhYTBjMmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM1ZGVmODEyNWRlNjY0YzAxNzBmMTFiNmYxOWNhNmY5MjVmZWQ1MzRiMDNhZDA2ZWZhYjlkNmYxYmIzMWJjYjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE5OGIwNjNkOWI0N2U2NTM3OTYyNTU3MmNjZTE5NzY2OWQ1NzY3ZTEyYzE4YmUwNzU2NTJiOGNkOTgxY2U4ZDUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjE1YmU2NTBhMzc0NzA4M2ZiNTJhYTY0YjA3MTMxODMyZjk1YmNiODNmY2E3NjA1NjM4MjZlNDFiZDRhMDlmY2IifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8f153c7940bc442392a5c6674209560d",
+      "statement": "The builder copies the egress inventory unchanged to the unversioned LangSmith output, while the authored cloud pages direct consumers to filter its `addresses` by `service`, `cloud`, and `region` and allowlist every matching CIDR.",
+      "evidence": [
+        {
+          "resource": "repo://src/langsmith/cloud-platform-features.mdx#L20-L30",
+          "version": "repo-lines-v1:sha256:4be83bef144f795207283411f3e2d6118e0b8af1ea4c7fb07bb7c3c7c4621a31:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJhZGZiOTMyOTU5MTNlM2RkZWZjNTQ3ZDFjZDE5ODkyMzg2ZDQ5MjM1OTcwNDI4YjdmMTEyMmY2MGQzOGUyYWYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjN2JkOWNjNzk2ZDc3NTNhYjQwMDQ1ZGM0OGViZWU2NzE1ZDNlYTQ1M2IwZDgwNzE3NjA4ZWQ4MjQ0NmZhMmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNlZTA4ODc5ZjI5ZjM3ODIxODVmZTU2NmYwNzhmZjY1MTg1NjRlNmEyZjM2NzAxYjVlMjk5NzExOTZmYTcwNzYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg4NzZjYjg1OTc0NjNlMzY2YTEwNmFlMjc5NTU4MTQ1M2JiZWVkMzY5NWRiNjgzNDM3NjY4ZGVjZjYwNmMzMjAifQ"
+        },
+        {
+          "resource": "repo://src/langsmith/cloud.mdx#L178-L188",
+          "version": "repo-lines-v1:sha256:fd7c38e8e6545c69550c01e8218b2593906161f7cd69923ea73a5bb005f95996:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY4OGYzYWU2NmNkYjJmNGZjMjhkNGRlYjdkN2NlNWZmOGQzODk1MWVkZTlkODI0YTIyYmNmNjI3YWYyZjY4Y2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFhZGFkYWI1MTVmNzQzODM0YTdkOTQxZTI0YTM4ZmMxZWEwMjE1ZTMxM2Q1YTMwNDk1NzUwNzliMDE4MmRkNTgiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjEzMjkxYmUxOWU4ZmE1YmM2MTc5ZTU0YmQwOWMzYmU5N2Y5NzAyM2Y0YTY2MjQ3NmMyZTljMDliNjliYjNjMzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE4NmEyODU2YjUwNjEzMDUwYWRmNjg1NWMwMThiMTA4MzI1MmRiM2FjOTNhMmFlMTFhZGE2NWVkNzZiY2ExYjgifQ"
+        },
+        {
+          "resource": "repo://tests/unit_tests/test_egress_ip_inventory.py#L80-L89",
+          "version": "repo-lines-v1:sha256:4ed48866c2f5bd43f31c9bec3665beeaa24e7f2cf08245521b7922b8dc68f423:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmY2JlZmEwYjkxMWZhYjJkZmQ5MzBjOTljM2RlYTZiYTk3MDg4NTQwNDViMjNlZGZiNmFmM2FmZWU4MTRhODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkMDcyOTUwZDk0MWI5MDMwMjVkMjI3NjdhOGIzMDEyNTU4ODdlY2ZjYzA2MDJiMTNkMTUwZmYzM2UwNmJlODEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJiMTg4MWY1NDhmZjRmYjdhMmM1N2ZkZGY5Y2ZmNzk4NDFmNzU4ZjY3YjJjYzMyY2UwNmUzNTNlMTAyNGQ3MjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c9cd38619ebb4d7d8658f4da3b50a477",
+      "statement": "The version-claim pull-request workflow checks changed MDX files, and its checker routes each `>=` or `==` package claim to PyPI or npm using package syntax, nearby labels, language fences, and page context; it fails only claims for versions absent from a successfully fetched registry and treats lookup failures as unresolved.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/check-version-claims.yml#L4-L58",
+          "version": "repo-lines-v1:sha256:31fb28e3c3578280387fc52e474c6f91823acb0bcb1d79f4c5f799dc783e0c52:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5NmRjNDgxNDlmNWE4M2QxZWQ2ZGJiMzliYmM3ZTJiOTAyYWEzZDM0ZDZiZDVhZTRiMjkxYjY4ZGYwY2E3OWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiZWY4NDRmYzQxMzIwOWIyMWQ2MDFjMWEwNDg1NGNmNmY4ODdjYzc0MzhkMmQ1YjYxMjAwMDY0ZDZhMDdkYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRjOWZjZGEwZjY3ODBmZTJlNzI3NDU3YmNkYzhjYTUwMWFiMjJjOWIyZmUyMTNhNjgxOTUwNzYyZDEwMGQwNjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://scripts/check_version_claims.py#L206-L230",
+          "version": "repo-lines-v1:sha256:936e1777014d6b15e0dd24213c9320fa514184dbe6da21181448d373670cb5dd:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJlNDcyNDkzNjJlZTFjMzIwOWI1ZWQzMmUwZTFhNTIwMzgyMjI4OTZiNTEwZTM4YTU1MDJiMDhiODA4Y2FmYzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlN2M5NTdiY2I0NGZiNjczYzk4YjAwNTBhNzVkMzgwODJkYjgxZDkxOGRlMzEzYTNmMDdjMTIzNTMwNmQ3ZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0Y2JhOWFmYzAyMWM5YmNhYjliZGRhYWFmNjJkOTgyMmIyMmQxZWY4YWQyMzRlNzMyODk4ZGNkNzYyYmYyYjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEzNTNmNjgyMzdmMThlNjhmMjBjNGE3MmE5YzFlYThjOTc3MDMxNTU0ZDE0NjRkYTg4ZDU2YjY3NTlhZTZiMWYifQ"
+        },
+        {
+          "resource": "repo://scripts/check_version_claims.py#L257-L331",
+          "version": "repo-lines-v1:sha256:7913769fd0f94743c2ac95ea159ddf22d3c58aabf7593dcdcc7b9c4662acfd17:eyJzZWxlY3RlZExpbmVDb3VudCI6NzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiMzk3OTMzYTI0YTgwMWVlOTIzMzI3YmQ2OWEwMTA0OWMwNzc5MTUwMjFjZjJlYzM5ZGRhNGY4MWFhODM3ZTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjE4MDEyMmY5YjQwOTc2NjQ3N2Y0ZDJmYzg0NWYyOTc2Y2I4YzAwZWFiODlkNTkwODgwZjE3ZmJkMWEzNmQwMDkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY2ODI4NTc2MTRmZTZlNjcyY2Y5Mjc5NDJlYTg3YTg4ZjRlMTAwMTZiMTc3OGYwNmE2MjlkZTM5NDg0ODVmMmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA1NzIyYjhjNGYyODMxYTA4YTZmZjE2OGQxNjUxMTRiNmZkYmFjZjk4NDIxNTM2NjI3NzY5M2JkY2IzYmQwMjAifQ"
+        },
+        {
+          "resource": "repo://scripts/check_version_claims.py#L39-L155",
+          "version": "repo-lines-v1:sha256:03d4594ee55215a63622daea8dc481133b2672e1d6c711e32cc57255ee9ab7d4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTE3LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiJmZGJiOTQwMDFlY2MzOWU3NmZhNWQ1MTY5MDg3NWRkMjBkMmE3YzRkNTg5ZGM4NjRjMTQ5YTJhMTZkYWU0YmVkIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI4NDIxMTM5YmY0YWI3NTdiNzVhYjY1Y2YzNDg5ZTJhMWQyYzk1NWI1NDFiZThjNzJkNTM1ZWU0MjgwN2M4ZDhjIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI3MDMwNDg1NmUzNjExOWRiODllY2NkMGZiNzlmNjRmMzIzMmZjN2Y5OGNiMDA1YmFhZGExNzllOTY5NWY3MDUzIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MywiZm9sbG93aW5nQ29udGV4dEhhc2giOiI4NWU4ZDYxMDI5NzZjZjRlZDVkOGUwYjJhMDgwYWRmZmNiZDJiNTJkMzY4NDQ0Y2M2YTBlODQ4NmExMDkzNzdlIn0"
+        },
+        {
+          "resource": "repo://tests/unit_tests/test_check_version_claims.py#L22-L112",
+          "version": "repo-lines-v1:sha256:2c0802be7d17fe980fcef6c78d6305e3478853ddb4b2c50df8335fb510d8c200:eyJzZWxlY3RlZExpbmVDb3VudCI6OTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYyYTY1ODhlODFmZjZlMmQxN2IyMjg4NDczOGRlMzFlOWQyODIwZDhjOWE0Y2JjNDAzMGZjMzU5MWYzYzJmN2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4OGUzZTU3Yzk0YTNkMTA1NmMzYTRmMWZmZmU5ODI0MjIwMmE1OTJlMDcyNWViZDkzNDY1NzJhNzg5ZDc2YTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg5Zjc0ZjAwZjU4M2RhODhkYzVkNDQ5YzI4MDg1MDE5MzMwOGJlMzFkMjE4NzYxZjg0MDc0NDhhNThhYTdlM2IiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjZhZWE3ZjA1NzJjN2ExNzMzMDIxZTkwNzdkOWYyZjZiYjJiODE4NTk0ZGQzNjYxM2JmNzlkNTNlY2JiZjBmZWIifQ"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.4.3",
-    "at": "2026-10-30T08:15:16.596Z"
+    "at": "2026-11-01T08:12:51.498Z"
   }
 }

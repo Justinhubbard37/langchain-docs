@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:8ddb3b00ad0fca5cee529717fcc52a7c6d45fa5b19db74c43bf15343481f64e6",
+  "pageVersion": "sha256:ca82fddff0a98bab0e95c621eb34185d41583a6e696743545fb975ce35f66197",
   "claims": [
     {
       "id": "claim_57e84dc243ac4b33838208ada1e699a6",
@@ -106,7 +106,7 @@
       "evidence": [
         {
           "resource": "repo://src/docs.json",
-          "version": "repo-file-v1:sha256:6155cf3b0a22adb1cb31bd47a6f1e5681a0c221dcfc0d12ca4ed6f3b19772bef"
+          "version": "repo-file-v1:sha256:86bb519e1b10e669379a414192d3de3f34a135fc776d3c2409d6f72073012654"
         }
       ]
     },
@@ -116,7 +116,7 @@
       "evidence": [
         {
           "resource": "repo://src/docs.json",
-          "version": "repo-file-v1:sha256:6155cf3b0a22adb1cb31bd47a6f1e5681a0c221dcfc0d12ca4ed6f3b19772bef"
+          "version": "repo-file-v1:sha256:86bb519e1b10e669379a414192d3de3f34a135fc776d3c2409d6f72073012654"
         },
         {
           "resource": "repo://src/language-toggle.js#L25-L60",
@@ -203,16 +203,16 @@
       "statement": "The unversioned LangSmith agent-workspace guides are projected together under Products and setup → LangSmith setup → Agent-based workspaces, including agents, environments, navigation, creation, UI building, and deployment.",
       "evidence": [
         {
-          "resource": "repo://src/docs.json#L2208-L2235",
-          "version": "repo-lines-v1:sha256:6062dfc44deac3a614c4d97efca6daec02a950831d0a2982167e14f077fd3248:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM0MmVmMGQyN2EyZTUwMzMwNjkzY2MyMWRmNWZkZjAyMjMyY2RlOWRlODA3MWVhM2JlMDQ3OWRjN2JlM2ZlNDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZjNGYwNjU4ZTI1M2VkZDkzMTg0NTY1NWI4YmY5NzYxMDdjMzgxZWJjMmYyNjc3YjVkOWM2NjZiZWY2ZjUxZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFjZmI4ZTFlMjNjZTIyNDBkNDMzZDVmZWI2NjdjZTkyY2ZiZTYwZTY4NWI5NmYzODFmZjA3YTE5ZmQzMmZiMGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk0YjE5OTNlNDVmMDc0NjJjMmJjYWI2ZTgxODNiYTYxY2IyY2I1OGE0YzE2NGRlZTI5ZTQ2NzUzMDZkMTEwOTcifQ"
+          "resource": "repo://src/docs.json#L2225-L2251",
+          "version": "repo-lines-v1:sha256:2a6deceb6c5cc63882c6bf39378a4983ebbb401965670994857514518d287c12:eyJzZWxlY3RlZExpbmVDb3VudCI6MjcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM0MmVmMGQyN2EyZTUwMzMwNjkzY2MyMWRmNWZkZjAyMjMyY2RlOWRlODA3MWVhM2JlMDQ3OWRjN2JlM2ZlNDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZhMGE2MDNlMWI5MmZjNTE2MjQ0ZTljYjc5M2Y2NjVmYzJhZDc4Y2Y3NDE0NjZiOTkwZjg5MDhjY2JhMmY0ZmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFjZmI4ZTFlMjNjZTIyNDBkNDMzZDVmZWI2NjdjZTkyY2ZiZTYwZTY4NWI5NmYzODFmZjA3YTE5ZmQzMmZiMGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjA4MjQwNjRhMjg2ZGVlOTMzMGQ1ZGQyYTg1OGE3ZDY2MTVhZWQzYWI0YTI0YWQ4YWYyZGI2ZGJjNjkzMmJkOTcifQ"
         },
         {
-          "resource": "repo://src/langsmith/agents.mdx#L1-L14",
-          "version": "repo-lines-v1:sha256:c8c58fba63c55eca7cb6500db5fa1624d8306ee9aaf3cce0cce40c0aa664bc08:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1MmQ3MTExMDNkNTBhNDM3ODMwYzZmYmNkMDRmYjRiYWI0OWEwZjgyZjZkMjZkMWM3OTFjNmU4NDg4ZGQwOTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdmM2RhYTc5YWVmYzZjM2EyYWJlMGQ4ZmU4YWUyYzQ2NjEyMzZlNGVjMmEwNjBmMmI2NTI5ZWYxY2QxODFiZjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImYyZDdlZDA0ZjA3NGIzMWYxNDIzMjBjMjI0ZjViMzJkODU1OWY4NmNmYTgyMmE0NGFjZDlmYjA5ODU3YWQ5MWIifQ"
+          "resource": "repo://src/langsmith/agent-registry.mdx#L1-L18",
+          "version": "repo-lines-v1:sha256:414eec617d2425d14e4253b973c52d33b2c66f26b261a30d86235256e43da8ff:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1MmQ3MTExMDNkNTBhNDM3ODMwYzZmYmNkMDRmYjRiYWI0OWEwZjgyZjZkMjZkMWM3OTFjNmU4NDg4ZGQwOTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjdmZGJjMmRmZmIxOGVjNWMzNmJmOWE5OGZlM2IxNTA3YzY5OGJhYTQyZmU1YmVjZWQwOWEyYzE2NTVhOTdhZGMifQ"
         },
         {
           "resource": "repo://src/langsmith/create-an-agent.mdx#L1-L29",
-          "version": "repo-lines-v1:sha256:020e73139b77786a84c5e7c0ffeaf8b5ad0b34e091cf5ca83fe0fc8fa49e9037:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1MmQ3MTExMDNkNTBhNDM3ODMwYzZmYmNkMDRmYjRiYWI0OWEwZjgyZjZkMjZkMWM3OTFjNmU4NDg4ZGQwOTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkZGNmYmM1OThhMGRiMTNlN2RkYjE4MjkwNDY2ZmU3Zjg0NjczODcxNTcwYWIxZDAyYTJmY2I0MTcyZWVkM2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM1ZWVkZjA5YTNiYzc5YTQ5ZThjZTUwMDI1YzJhOGQzNTZmZjIwOWU2MGIyNTY1YmFmMWNkZjk4N2NiYzU0OTgifQ"
+          "version": "repo-lines-v1:sha256:a91b3ad24a6bbb27b11ed475b8951a6a5013ccdf5068173d3874bfd22bc4e350:eyJzZWxlY3RlZExpbmVDb3VudCI6MjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1MmQ3MTExMDNkNTBhNDM3ODMwYzZmYmNkMDRmYjRiYWI0OWEwZjgyZjZkMjZkMWM3OTFjNmU4NDg4ZGQwOTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhkZGNmYmM1OThhMGRiMTNlN2RkYjE4MjkwNDY2ZmU3Zjg0NjczODcxNTcwYWIxZDAyYTJmY2I0MTcyZWVkM2IiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM1ZWVkZjA5YTNiYzc5YTQ5ZThjZTUwMDI1YzJhOGQzNTZmZjIwOWU2MGIyNTY1YmFmMWNkZjk4N2NiYzU0OTgifQ"
         }
       ]
     },
@@ -261,10 +261,24 @@
           "version": "repo-lines-v1:sha256:db8186c6d1c6f0b0a0d2c5f15dbbc3450cdd9811de3fec26d24df054f2c42fb7:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg1ZjIzNGYxOWZkNTU3ZGZiYWZkZGMwNGRhNzFjNWU1NzE1YjJlOTE0ZmJmMmIwMTA4NjgzM2FmYjZkNDhhY2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0MDQyNzM2ZTE0MGNkNzVhOGJmMDljZDhlMDFkZDU3ZTU2YmE3NTQ0MzkwODMyNTdkYmY2ZjNlMmZiODI1MDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjY1YzNiYjk2YTIxOTkzNDdiYjUxMTMzYWY2NjhmZDg2YjVlNjc1NzU1ZjUwNDNlZDNkM2ZlYjJkZmIyYzYyMjgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE0ZWQ5NGQ5OWVmOTI2YjI4MzRmY2QzMjE1M2FlYTcyNjg0OGJlMzA2ZDQ4YjUzOTViOWM4NzA4NWIzNjMxODYifQ"
         }
       ]
+    },
+    {
+      "id": "claim_43a99115b0824127b63baab7d4fe5b68",
+      "statement": "The Managed Deep Agents quickstart uses conditional Python and JavaScript setup paths; `mda dev` starts a local Agent Server and opens LangSmith Studio, while `mda deploy` packages the project for a hosted LangSmith Agent Server deployment.",
+      "evidence": [
+        {
+          "resource": "repo://src/langsmith/managed-deep-agents-quickstart.mdx#L238-L309",
+          "version": "repo-lines-v1:sha256:4d6ddc79f3065e54fde67616da4d221a85ba1a4a59bef5fbb71e2356e260c102:eyJzZWxlY3RlZExpbmVDb3VudCI6NzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ5NzJjYjgxZGNjNjM0NWUxMDBjNjIzZGEwOTA4NDRjYThhMDNiY2I0OTBmODQ2Y2QxZWYyMWJiZjFlMGM2NjkiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA1ZGVlNWZiYmYyMDQxMzRjYjM0ZjZmZWI2OGRkN2FkODY4OTc0MWY0M2Q2NzNjMzU5ODExNTU1NDYzMjUwOGYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ0NWNhYzJhNjIyNmNiZDg4MmZhMTc3NmZlZDE5ODgwN2VjZTdkZmYxY2Y5MmJhNjM2NWRkNWM0MDJmNjczNTgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjBlMzM2NzcwOWFiMTQ3ZmEwZTM2ODdlNjczM2M5MzU0ZjQ0ZWYxNmNjMTFjYjZiNmJkZDM0YzU5MjlmMTc5OWQifQ"
+        },
+        {
+          "resource": "repo://src/langsmith/managed-deep-agents-quickstart.mdx#L72-L103",
+          "version": "repo-lines-v1:sha256:89f55ad35eaab3ddd4dca3ff562bd2a009929f4fe47fa258d4697110498923fe:eyJzZWxlY3RlZExpbmVDb3VudCI6MzIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA4Yzg1NWQ3MzFlMmE5NDZiZTI2NTJmMGQ1MDZmNjZmNjFhMzRkN2Y0ZGIxZjI3ZWFlNjcyMGQzMDY3NmQ4N2QiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY0MDQyNzM2ZTE0MGNkNzVhOGJmMDljZDhlMDFkZDU3ZTU2YmE3NTQ0MzkwODMyNTdkYmY2ZjNlMmZiODI1MDEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImExYjViNjJkZGQ2YWMwM2U5MDA2MjU4ZTY4MDM4OWZkYzkzNDQ0ODQxOGM5MDZkZjhhNzQ2NjQyMDNlM2NlZmQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImExMGUzNWUwOWU3NGIyYWQzMzg5NDQ2OTBjMjUwNThiN2VkY2M5NTkxNDk0ZmJkNDQ3NzRlMzNiMzk5MTY5OGIifQ"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.4.3",
-    "at": "2026-10-30T08:15:16.596Z"
+    "at": "2026-11-01T08:12:51.498Z"
   }
 }

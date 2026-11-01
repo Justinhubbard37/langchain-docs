@@ -5,7 +5,7 @@ description: Use the repository-wide instruction contract and task-specific skil
 tags: [agents, skills, documentation, automation, validation]
 verified:
   - by: openwiki/0.4.3
-    at: 2026-10-30T08:15:16.596Z
+    at: 2026-11-01T08:12:51.498Z
 sources:
   - id: openwiki-source-18732c72f962c06354cb62db
     resource: repo://.agents/skills/add-docs-page/SKILL.md
@@ -41,7 +41,7 @@ sources:
     resource: repo://tests/unit_tests/test_parse_integration_submission_issue.py
   - id: openwiki-source-1695beda93a0ca504f038424
     resource: repo://tests/unit_tests/test_skills.py
-generated: { by: "openwiki/0.4.3", at: "2026-10-30T08:15:16.596Z" }
+generated: { by: "openwiki/0.4.3", at: "2026-11-01T08:12:51.498Z" }
 ---
 
 # Agent Instructions and Authoring Skills
@@ -50,7 +50,7 @@ The repository separates rules that apply to every task from procedures that app
 
 ## Keep universal rules in `AGENTS.md`
 
-`AGENTS.md` owns repository-wide invariants: do not fabricate content, test code examples, do not edit `build/`, update navigation for new pages, and use valid frontmatter and documentation syntax. It also owns the style guide and navigation map. Four derivative instruction surfaces mirror parts of that contract: the Cursor and Copilot copies cover the critical rules, repository structure, quick reference, frontmatter, and syntax; the two path-scoped style files copy the style guide through product and feature-name capitalization. Update the relevant copies in the same pull request when changing one of those root-guide sections.
+`AGENTS.md` owns repository-wide invariants: do not fabricate content, test code examples, do not edit `build/`, update navigation for new pages, and use valid frontmatter and documentation syntax. It also owns the style guide and navigation map. The style-guide source through product and feature-name capitalization is mirrored verbatim in the path-scoped Cursor and Copilot files, `.cursor/rules/docs-style.mdc` and `.github/instructions/docs-style.instructions.md`; the critical rules, repository structure, quick reference, frontmatter, and syntax have summarized copies in `.cursorrules` and `.github/copilot-instructions.md`. Update the relevant copies in the same pull request when changing their root-guide section.
 
 A skill owns conditional, multi-step work: placing a page, editing a live PR, restructuring a page family, extracting snippets, reviewing prose, opening a PR, or recording a tooling change. Skills link to `AGENTS.md` instead of repeating global policy. This keeps always-loaded context small and avoids silently divergent copies of the same rule.
 
@@ -81,11 +81,11 @@ flowchart TD
   Copy --> Reinstall["Reinstall after source changes"]
 ```
 
-This diagram distinguishes the live Claude links from a copied installation that can become stale.
+This diagram distinguishes live Claude links from a copied installation that can become stale.
 
-## Route work to the skill that owns it
+## Route work to the owning skill
 
-The catalog is duplicated in `.agents/skills/README.md` and the `AGENTS.md` Skills table. Its current skills are:
+The canonical catalog contains twelve skills. `.agents/skills/README.md` and the `AGENTS.md` Skills table must list exactly the same set.
 
 | Skill | Invoke when | Boundary and outcome |
 | --- | --- | --- |
@@ -93,7 +93,7 @@ The catalog is duplicated in `.agents/skills/README.md` and the `AGENTS.md` Skil
 | `docs-edit` | Revising an existing page or named documentation PR | Uses the actual PR head branch and live diff; related-page changes stay limited to needed corrections or pointers. |
 | `docs-restructure` | Consolidating, splitting, retiring, or de-duplicating a page family | Builds a duplication map and assigns one topic owner before passing page lifecycle mechanics to `add-docs-page`. |
 | `docs-team-voice` | Drafting or revising prose | Supplies the editorial pass for conditions, defaults, identifiers, sentence length, links, and verified claims. |
-| `docs-review` | Reviewing completed documentation changes | Reviews only changed documentation, combines Vale with style rules it cannot detect, and reports the rule behind each finding. |
+| `docs-review` | Reviewing completed documentation changes | Reviews changed documentation, combines Vale with style rules it cannot detect, and reports the rule behind each finding. |
 | `open-docs-pr` | Opening a PR for finished changes with no existing PR | Branches from current `origin/main`, runs applicable gates, commits, opens and pushes the PR safely, and watches its checks. |
 | `docs-code-samples` | Converting visible code to a runnable external sample | Owns marker conventions, executable harnesses, extraction, generated snippets, and sample-specific validation. |
 | `verify-against-source` | Asserting behavior, defaults, signatures, or sample facts | Selects the strongest available evidence and the repository that owns the claim, then records verification gaps. |
@@ -101,9 +101,7 @@ The catalog is duplicated in `.agents/skills/README.md` and the `AGENTS.md` Skil
 | `submit-integration` | Processing a structured new integration issue | CI-only, unattended creation of a best-effort listing from untrusted form data. |
 | `update-integrations-prs` | Maintaining an existing contributor integration PR | Interactive branch maintenance, eligibility conversion, and explicit push control. |
 
-`add-docs-page` treats a page as incomplete until it has its navigation entry; a move, rename, or deletion also needs redirects. It directs authors to the source-directory map in `AGENTS.md`, checks facts against product source rather than neighboring docs, and requires the prose review after finished prose. `open-docs-pr` is not a substitute for `docs-edit`: use it only when no PR exists. It starts a branch from freshly fetched `origin/main`, avoids bare pushes, records applicable gates in the PR description, and ends the description with a plain AI-disclosure sentence rather than a generated-attribution badge.
-
-For a named PR, `docs-edit` requires a clean checkout of the actual head branch, verifies `HEAD` and its upstream, and uses `gh pr checkout <n>` for a cross-repository PR. Check factual documentation claims against implementation or their owning input, not against another documentation page. Generated changelogs, specifications, catalog snippets, and `build/` are outputs: repair their generator or upstream source.
+`add-docs-page` treats a page as incomplete until it has its navigation entry; a move, rename, or deletion also needs redirects. It directs authors to product source rather than neighboring docs for factual claims, and requires the prose review after finished prose. `open-docs-pr` is not a substitute for `docs-edit`: use it only when no PR exists. It starts a branch from freshly fetched `origin/main`, avoids bare pushes, records applicable gates in the PR description, and ends the description with a plain AI-disclosure sentence rather than a generated-attribution badge.
 
 When placement is the problem, `docs-restructure` maps duplicated topics across the page family and assigns one owner. Replace duplicate material with a pointer rather than moving or restyling it in place. `add-docs-page` then handles routes, redirects, anchors, build and link checks, and invokes `docs-review` after prose is complete.
 
@@ -135,13 +133,13 @@ make test-code-samples FILES="src/code-samples/langchain/return-a-string.py"
 make code-snippets
 ```
 
-`make code-snippets` extracts visible regions into gitignored `src/code-samples-generated/` and then generates committed MDX in `src/snippets/code-samples/`. `CODE_SNIPPET_SOURCES` limits the source extraction while iterating, but generation still consumes the intermediate set. Run `make lint` after writing a sample. Do not change `pyproject.toml` or hide a failing sample through a lint exclusion.
+`make code-snippets` extracts visible regions into gitignored `src/code-samples-generated/` and then generates committed MDX in `src/snippets/code-samples/`. `CODE_SNIPPET_SOURCES` limits source extraction while iterating, but generation still consumes the intermediate set. Run `make lint` after writing a sample. Do not change `pyproject.toml` or hide a failing sample through a lint exclusion.
 
 The runner uses an explicit `FILES` list or discovers supported Python, TypeScript, Java, Kotlin, Go, and shell files; `CODE_SAMPLE_PATHS` narrows either selection. CI partitions top-level sample directories into OSS and LangSmith matrix legs, and fails if a new directory is assigned to neither leg.
 
 ## Record tooling changes before handoff
 
-A new or changed tracked script, GitHub Actions workflow, Make target, PR check, scheduled job, agent, skill, or MCP server automatically triggers `docs-tooling-notion`. Invoke it before handing off the pull request—not after merge and not only when someone asks.
+A new or changed tracked script, GitHub Actions workflow, Make target, PR check, scheduled job, agent, skill, or MCP server automatically triggers `docs-tooling-notion`. Invoke it before handing off the pull request, not after merge and not only when someone asks.
 
 The skill keeps the repository as the authoritative location for detailed procedures. It uses Notion for discovery-level information: route a topic to exactly one of five Docs Team pages, fetch before each update, make narrow `update_content` replacements, and fetch again after a timeout or asynchronous update before retrying. For a new workflow, script, skill, agent, MCP server, or git hook, query the parent Detailed list first, then add its discovery row. When tracked tooling moves or is renamed, update the row's `Source` field.
 
@@ -192,13 +190,15 @@ flowchart TD
   PullRequest --> Review["Link PR for human review"]
 ```
 
-This flow shows that issue text cannot initiate a privileged listing without a maintainer and that the agent output still has workflow and human-review gates.
+This flow shows that issue text cannot initiate a privileged listing without a maintainer and that agent output still has workflow and human-review gates.
 
 The prompt requires measured downloads, uncommitted working-tree edits, no push, no pull request, and no GitHub comments from the agent. A blocker file, unsuccessful agent result, or empty staged and unstaged diff comments on the issue and creates no PR. With real changes, the workflow removes a local blocker file, mints its GitHub App token after the agent step, creates the `integration/issue-<number>` PR, adds the `integration` label, assigns `npentrel`, and links the PR from the issue. It does not merge the PR; human review remains the approval boundary. To retry an agent or no-change outcome, remove `integration-automation` and have a maintainer apply `integration-run` again. A parse-error response makes that removal conditional because it may not have added the marker.
 
 ## See also
 
+- [GitHub Actions integration](/openwiki/integrations/github-actions.md)
 - [Adding and Moving Documentation Pages](/openwiki/operations/adding-pages.md)
 - [Local Tooling and Commands](/openwiki/operations/cli-tools.md)
 - [Quickstart](/openwiki/quickstart.md)
+- [Test overview](/openwiki/testing/test-overview.md)
 - [Runnable Code Samples and Snippet Generation](/openwiki/workflows/code-sample-lifecycle.md)

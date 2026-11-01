@@ -38,10 +38,10 @@ sources:
     resource: repo://src/docs.json
   - id: openwiki-source-38d325b9c51f3c8dfd528917
     resource: repo://tests/unit_tests/test_filter_mint_broken_links.py
+generated: { by: "openwiki/0.4.3", at: "2026-11-01T08:12:51.498Z" }
 verified:
   - by: openwiki/0.4.3
-    at: 2026-10-30T08:15:16.596Z
-generated: { by: "openwiki/0.4.3", at: "2026-10-30T08:15:16.596Z" }
+    at: 2026-11-01T08:12:51.498Z
 ---
 
 # Mintlify Integration
@@ -112,6 +112,8 @@ The LangSmith REST specification is refreshed daily. The refresh job fetches onl
 ## Preview and production lifecycle
 
 For same-repository pull requests, the preview workflow validates source branch characters and length, runs `make build`, creates a collision-resistant `preview-` branch name from a sanitized prefix, timestamp, and commit SHA, and force-adds the generated `build/` tree to that branch. It then calls Mintlify's preview API only after checking the API key, project ID, and branch name. A non-JSON response—or an error response with neither status ID nor preview URL—fails the workflow. Fork PRs are skipped because the workflow needs repository write access. On PR close, cleanup finds matching preview branches and refuses to delete a name without the `preview-` prefix.
+
+After a successful pull-request deployment trigger, the workflow removes earlier bot preview comments and posts one replacement comment. When Mintlify returns a preview URL, it includes that URL and deep links for up to five changed routable Markdown or MDX files, ranked by diff size; snippets and code samples are excluded. The comment also warns that the deployment may need several minutes. Treat this as review guidance, not route validation—the URL mapping defaults ordinary OSS source paths to the Python route.
 
 On pushes to `main` or manual dispatch, the production workflow builds the tree, copies it to `public/build`, and publishes `public` to the `prod` branch. Both preview and `prod` branches are generated deployment handoffs, not authoring locations.
 

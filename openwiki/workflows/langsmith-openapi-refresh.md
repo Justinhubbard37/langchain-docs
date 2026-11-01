@@ -3,9 +3,6 @@ type: generated API publication workflow
 title: LangSmith OpenAPI Refresh
 description: Documents the reviewed daily refresh that converts the LangSmith platform OpenAPI source into the committed Mintlify input for the LangSmith REST reference. Covers processor policy, constrained ingestion, PR lifecycle, validation limits, and the separate Agent Server and Control Plane inputs.
 tags: [langsmith, openapi, automation, github-actions, mintlify, security]
-verified:
-  - by: openwiki/0.4.3
-    at: 2026-10-30T08:15:16.596Z
 sources:
   - id: openwiki-source-5153f86e64d6ee0b305f72b3
     resource: repo://.github/workflows/refresh-langsmith-openapi.yml
@@ -21,6 +18,9 @@ sources:
     resource: repo://src/docs.json
   - id: openwiki-source-38d325b9c51f3c8dfd528917
     resource: repo://tests/unit_tests/test_filter_mint_broken_links.py
+verified:
+  - by: openwiki/0.4.3
+    at: 2026-11-01T08:12:51.498Z
 generated: { by: "openwiki/0.4.3", at: "2026-10-30T08:15:16.596Z" }
 ---
 

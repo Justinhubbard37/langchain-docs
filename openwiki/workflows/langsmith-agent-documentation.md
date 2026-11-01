@@ -34,8 +34,8 @@ sources:
     resource: repo://src/docs.json
   - id: openwiki-source-f685babda3a9a82ad6b9c98e
     resource: repo://src/langsmith/agent-environments.mdx
-  - id: openwiki-source-661abd9305024589f43ce542
-    resource: repo://src/langsmith/agents.mdx
+  - id: openwiki-source-da820a9dbbf8f16f1502a5c0
+    resource: repo://src/langsmith/agent-registry.mdx
   - id: openwiki-source-efb95e7fd1324eefaec0577a
     resource: repo://src/langsmith/create-an-agent.mdx
   - id: openwiki-source-ad43538180e2060b126ab46c
@@ -70,10 +70,10 @@ sources:
     resource: repo://src/snippets/langsmith/trace-ingestion-project.mdx
   - id: openwiki-source-8358ceb3c932d2549365532d
     resource: repo://src/snippets/trace-with-openai.mdx
-generated: { by: "openwiki/0.4.3", at: "2026-10-30T08:15:16.596Z" }
+generated: { by: "openwiki/0.4.3", at: "2026-11-01T08:12:51.498Z" }
 verified:
   - by: openwiki/0.4.3
-    at: 2026-10-30T08:15:16.596Z
+    at: 2026-11-01T08:12:51.498Z
 ---
 
 ## Scope and ownership
@@ -108,7 +108,7 @@ This diagram shows that an agent address selects one environment for ingestion, 
 
 Keep these rules aligned wherever they appear:
 
-1. An address is the pair of immutable agent identifier and environment. The code vocabulary is `local`, `development`, `staging`, and `production`; an identifier alone does not pick a destination. Explicit SDK configuration wins over environment variables.
+1. An address is the pair of immutable agent identifier and environment. The code vocabulary is `local`, `development`, `staging`, and `production`; an identifier alone does not pick a destination. Explicit SDK configuration wins over environment variables. The four names are fixed, but do not assume all four environment records already exist: an agent created through the Build tab starts with Production and gains the others when a trace is first addressed to them, whereas SDK/API and deployment creation start with all four.
 2. Agent identifiers are stable routing values, unlike editable display names. Registration is setup work requiring a credential with `projects:create`; a duplicate identifier returns `409`.
 3. The response environment supplies `tracer_session_name` for consumers that require a project name and `tracer_session_id` or resolved `session_id` for `project_id`/`project_ids` APIs. Never derive either from an agent label.
 4. Do not combine the agent dialect with `LANGSMITH_PROJECT`, `LANGCHAIN_PROJECT`, `LANGCHAIN_SESSION`, a code `project_name`, or an OTLP project header. A partial agent-variable pair warns and leaves otherwise unaddressed calls untraced; explicit conflicting addresses fail or are rejected.

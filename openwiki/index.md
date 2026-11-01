@@ -4,7 +4,7 @@ okf_version: "0.2"
 
 # Files
 
-- [Repository Wiki Quickstart](quickstart.md) - Route documentation, tooling, sample, and automation changes to their durable owner, generated-output boundary, and proportionate validation. Use this map before editing a rendered route or choosing a repository workflow.
+- [Repository Wiki Quickstart](quickstart.md) - Route documentation, generated-content, validation, agent-workspace, and automation changes to their durable owner. Use this map before editing a rendered route or selecting a repository workflow.
 
 # Directories
 

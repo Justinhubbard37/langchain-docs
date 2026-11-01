@@ -1,7 +1,7 @@
 # Files
 
 - [Weekly Changelog Publication](changelog-publication.md) - Explains the review-gated weekly proposal pipeline for LangSmith Cloud and Fleet changelogs. Covers windowed PR collection, model-assisted curation, rollout-held encrypted state, public-repository safety, and focused validation.
-- [Runnable Code Samples and Snippet Generation](code-sample-lifecycle.md) - Explains how runnable documentation sources are executed, extracted, rendered as committed MDX, optionally linked to public LangSmith traces, and operated through CI.
+- [Runnable Code Samples and Snippet Generation](code-sample-lifecycle.md) - Explains how runnable documentation sources are validated, extracted, rendered as committed MDX, optionally linked to public LangSmith traces, and operated through CI.
 - [Integration Listing Automation](integration-listing-automation.md) - How integration metadata becomes hosted guides, external listings, generated download tables, and the Python provider overview. Covers ownership boundaries, scheduled regeneration, URL safety validation, and the checks required for safe changes.
 - [LangSmith Agent and Observability Documentation Changes](langsmith-agent-documentation.md) - Safely update connected LangSmith agent, observability, evaluation, prompt, runnable-sample, Managed Deep Agents, navigation, and generated REST-reference documentation without editing derived output.
 - [LangSmith OpenAPI Refresh](langsmith-openapi-refresh.md) - Documents the reviewed daily refresh that converts the LangSmith platform OpenAPI source into the committed Mintlify input for the LangSmith REST reference. Covers processor policy, constrained ingestion, PR lifecycle, validation limits, and the separate Agent Server and Control Plane inputs.

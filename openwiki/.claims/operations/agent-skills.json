@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:07f5f336ca705611747e949f443152107b10129a43cea5f3b25f423aec82a449",
+  "pageVersion": "sha256:b5286bba7ea3eec68eeb7f45238245615fc95f23df4558d34b91accaaa259422",
   "claims": [
     {
       "id": "claim_5e62afeb3622464589089d5bb2b2cc43",
@@ -243,24 +243,6 @@
       ]
     },
     {
-      "id": "claim_386e55b56bf84f8696fb15d174e0cc12",
-      "statement": "The current canonical catalog contains eleven skills, including `open-docs-pr`; both the README and `AGENTS.md` identify it as the workflow for opening a finished documentation PR, while `docs-edit` owns changes to an already-open PR.",
-      "evidence": [
-        {
-          "resource": "repo://.agents/skills/README.md#L39-L53",
-          "version": "repo-lines-v1:sha256:0132dbe62a6b420122d734898b82af777c8fc032cdf5d9873f6eefe27b808d4b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhNzkwNTJmMjViZDhhNjU1NWRlMzFlN2M1MjI1NGE1ZDU0MjJhYjY0MmYzOWQxNzJiMWJmYzQyNDU3YWNlYzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlYjJiYzM4OGRkMDdmNDgxNGZkYTk0NGY3ZGU2MzI1OGRhYTlkYTJmMmZiZTM4YTE1YmRhYjIxNzk2ZWNmNWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQyZWRlMzFiYTM2NzBiNjM3NWVhNTRhODNmM2JkZDFjYzY0MjRhMmQ2MWUzNTA2OGY3YmUyMzA3N2ZlYTg2NTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM3MzQwMzRlZjI3YzFhZWZhOGUxNDY2ZGVmZGJkNjk2YmQyZWRkYjI2ZTg4OWE0ZGY0YThkYzVjOWI2N2EzMDUifQ"
-        },
-        {
-          "resource": "repo://.agents/skills/open-docs-pr/SKILL.md#L6-L14",
-          "version": "repo-lines-v1:sha256:3c905f631880c5af9e2f17910cd5237e18179d65e6a3f0e262d6d28c1a0eaef2:eyJzZWxlY3RlZExpbmVDb3VudCI6OSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTdmMmY4MWJhZDA4ZWZlNjgwNDNlYTA2ZDVkMzc0ZWM3YjBmYjQ5YTI5NzRjNjM4MDNkZDA2ZGEyNmY4MDYzYyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiY2UzZDNhNTVjY2UzNmYwMWJmNDdjNWU0MDlmZTk2NDY0NTAyNThlMDdjNzk2OTU3MmQwNDRlMjM4OGY3MDYzMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiNmE0M2VkNmNkYzM1OWNlNTc2N2E1NGEzYjUzMzllYjIxOTVkOTlkMjQ1YWZjMGJjNThhNjhmNmI2NWYzZDI4NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzFjZjM3ZDAzYTVhNWU3MzNkZjUxNzVmMzU3ZTg0YTkwNGQwYzUxZTY4ODFlY2ZiMWFiZTI4ZTFjMzUxY2JlZiJ9"
-        },
-        {
-          "resource": "repo://AGENTS.md#L39-L58",
-          "version": "repo-lines-v1:sha256:a64c9e4754198ff860dd027caf6487cdde64259ec1ddcd324bfd5094c2265527:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlOWYyYmM5ZmMwNWNmNzIzZDM4OTc5ZGQ2NTY0M2MyMzJhNjljODdmMzNlNDg1YWM1Y2IzMjgzZTZlMGFhN2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJiYTU0YmE2Y2FkZmI4ZGVjNzkwNDZkYWQxODZjNzg5OGQ5ZDI2YjU1YmM3NGQ1NTFjZWFjMzRhMGM1MGZiZDQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4ZGE1ZmM5MmYzNmIwYjEyZWQwNmFhOTUzMjFiOTlmYzZhNjVlZjM5MTM5MWY0MjE3NWZlMmFkMmVmNWUzN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI0ZjJkZjRhZDY0NTdjYTBjODU3ODJhZTU0MDRjODJmMmMzMWQyMGUzMGM5ZTg4YzhhYzI1MmZkYTllOWQ4ZDEifQ"
-        }
-      ]
-    },
-    {
       "id": "claim_8e8bcae10c1d452f992696362debfbf4",
       "statement": "`add-docs-page` makes page lifecycle work explicit: a new page needs navigation, a move or deletion needs redirects, factual claims must be verified against product source, and finished prose is handed to `docs-review` before committing.",
       "evidence": [
@@ -299,10 +281,28 @@
           "version": "repo-lines-v1:sha256:9beaa423cf218552fc9a73d72f63b674dd09c7bd52283b0a66ccd18e84ec45df:eyJzZWxlY3RlZExpbmVDb3VudCI6MzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijc1ZmY0ZTAyMzE1ZWExNjgzMTg3YWFmNDc3ODg4NDlmMDdjYzBhN2ViMTgxYWQyZTBkZDc4ZjY4ZTJhYmZkMjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3YzA2YzU2MWQ1YzMyNzM0MzY4NTI2OGE0NmIzMzkxZjM5OThlZWU4OTBkMmJlNTFmMGQyMWNjNGE1M2FlNmQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE1MGRkZGY4NGIyODk1Y2M2OTFjMTlkZmYxYmE0Y2U5YmNhNTU3MGU0MDA5Yzc0YmFlZDc5ZGFkZWJmM2FhNDEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI0NTFkNDMzNTdiYWM0ZjhlZGZmM2M3MjM0YTFjNTczODU4Nzg0Y2U3M2I1NWI2OWEyNDhmOTE3NDc1NDEyZjUifQ"
         }
       ]
+    },
+    {
+      "id": "claim_75ca612ece234530a322c6154a0c6c71",
+      "statement": "The canonical skill catalog contains twelve skills: add-docs-page, docs-code-samples, docs-edit, docs-restructure, docs-review, docs-team-voice, docs-tooling-notion, open-docs-pr, submit-integration, update-integrations-prs, and verify-against-source; the README and `AGENTS.md` list the same set.",
+      "evidence": [
+        {
+          "resource": "repo://.agents/skills/README.md#L39-L53",
+          "version": "repo-lines-v1:sha256:0132dbe62a6b420122d734898b82af777c8fc032cdf5d9873f6eefe27b808d4b:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVhNzkwNTJmMjViZDhhNjU1NWRlMzFlN2M1MjI1NGE1ZDU0MjJhYjY0MmYzOWQxNzJiMWJmYzQyNDU3YWNlYzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlYjJiYzM4OGRkMDdmNDgxNGZkYTk0NGY3ZGU2MzI1OGRhYTlkYTJmMmZiZTM4YTE1YmRhYjIxNzk2ZWNmNWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQyZWRlMzFiYTM2NzBiNjM3NWVhNTRhODNmM2JkZDFjYzY0MjRhMmQ2MWUzNTA2OGY3YmUyMzA3N2ZlYTg2NTkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImM3MzQwMzRlZjI3YzFhZWZhOGUxNDY2ZGVmZGJkNjk2YmQyZWRkYjI2ZTg4OWE0ZGY0YThkYzVjOWI2N2EzMDUifQ"
+        },
+        {
+          "resource": "repo://AGENTS.md#L39-L66",
+          "version": "repo-lines-v1:sha256:f6b86345f47da64d4fe04e5467af9a1a94dff28d2e911992b5afa3e7f21d1d6d:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlOWYyYmM5ZmMwNWNmNzIzZDM4OTc5ZGQ2NTY0M2MyMzJhNjljODdmMzNlNDg1YWM1Y2IzMjgzZTZlMGFhN2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjlhYmM4MzNiMWMwOTMzOTQ1MmI1NTE1ZmNmMmM0M2JlM2IwZjczYmJiYjgwODZhNjQ4MDMyMGY4ODZiM2ZmMjEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg4ZGE1ZmM5MmYzNmIwYjEyZWQwNmFhOTUzMjFiOTlmYzZhNjVlZjM5MTM5MWY0MjE3NWZlMmFkMmVmNWUzN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZlYjBiYmI4MzcwNTUxZGE4NDE5ZDZmZWY4NWZlMDJkNmNmZTNkMTBmYjE0ZmUxMjBjNTk0Y2VjNDBkMTNhNzMifQ"
+        },
+        {
+          "resource": "repo://tests/unit_tests/test_skills.py#L164-L186",
+          "version": "repo-lines-v1:sha256:0b9da08ac3fbf1d86f68dae569c2da80d22cac772b42e876a5e8b4c4fa68381b:eyJzZWxlY3RlZExpbmVDb3VudCI6MjMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM0NWViNDgyMDBhZGQwMmYwMzU2MGQxY2UzOTk3NWQ0MTRlNTA1MDIzNzcyY2YwYjQyZTcxYTY0YTQ5YjFlMDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjMwYzFmMTg4ZjE0MmVkN2E4MjQ2ODBiMjA3MTcyYzU1MTliYzYxNGE0OGZkYTdjZjE2N2VkYjhkZGY3OTk1NmMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImFjODQ2NDMwOWU0YzhhYTI4ZTY2YTUyNjNhODg5MTlhZWJmNGU1MGQ2Y2U3NzYyZTRiMTMyMTRhYjA2ZTU0NTYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.4.3",
-    "at": "2026-10-30T08:15:16.596Z"
+    "at": "2026-11-01T08:12:51.498Z"
   }
 }

@@ -1,8 +1,11 @@
 ---
 type: documentation workflow
 title: Runnable Code Samples and Snippet Generation
-description: Explains how runnable documentation sources are executed, extracted, rendered as committed MDX, optionally linked to public LangSmith traces, and operated through CI.
+description: Explains how runnable documentation sources are validated, extracted, rendered as committed MDX, optionally linked to public LangSmith traces, and operated through CI.
 tags: [code-samples, documentation, mdx, testing, tracing, ci, langsmith]
+verified:
+  - by: openwiki/0.4.3
+    at: 2026-11-01T08:12:51.498Z
 sources:
   - id: openwiki-source-ddbddbe474c8dc57119458d7
     resource: repo://.agents/skills/docs-code-samples/SKILL.md
@@ -38,10 +41,7 @@ sources:
     resource: repo://tests/unit_tests/test_generate_code_snippet_mdx.py
   - id: openwiki-source-b631fb59f417cefbd356f03e
     resource: repo://tests/unit_tests/test_test_code_samples.py
-verified:
-  - by: openwiki/0.4.3
-    at: 2026-10-30T08:15:16.596Z
-generated: { by: "openwiki/0.4.3", at: "2026-10-30T08:15:16.596Z" }
+generated: { by: "openwiki/0.4.3", at: "2026-11-01T08:12:51.498Z" }
 ---
 
 ## Source of truth and lifecycle
@@ -64,6 +64,8 @@ flowchart TD
 
 This is the source-to-docs lifecycle. The ignored intermediate is replaceable build state, while committed MDX is the reviewed documentation artifact.
 
+Documentation pages consume the generated fragments through MDX imports. For example, the LangGraph Graph API page imports generated Python and TypeScript fragments, and the LangSmith tracing quickstart imports its provider-specific app fragments. This consumer boundary keeps executable source, presentation extraction, and prose pages separate.
+
 Two representative source-to-document relationships illustrate the boundary. `async-subagents-answer-waiting.ts` defines the TypeScript helper that reads the subagent thread's pending interrupt and resumes it using the task ID as that thread ID; the async-subagents guide imports its generated fragment. `observability-quickstart-app-openai.py` wraps an OpenAI client and marks both the tool and pipeline with `@traceable`; its generated Python fragment is included in the tracing quickstart. Their generated fragments preserve the visible code but omit source markers and any removed harness code.
 
 ## Author runnable regions
@@ -76,7 +78,7 @@ Prefer one source for related Python regions, but account for each runtime's sco
 
 ## Execute samples locally
 
-Use the source runner before rendering:
+Test the source before rendering it:
 
 ```bash
 make test-code-samples FILES="src/code-samples/deepagents/async-subagents-answer-waiting.ts"
@@ -133,6 +135,8 @@ sequenceDiagram
 This is the guarded trace-publication path. When tracing is enabled, the runner stamps a source with exactly one safe snippet ID through `LANGSMITH_DOCS_SNIPPET`. After a successful sample only, collection runs under a lock, finds a root run with that exact metadata value, excludes already claimed run IDs, and stores its shared URL in `src/code-samples/trace-links.json`. The renderer appends a **View example trace** Card only when the manifest supplies that URL.
 
 The collector fails closed. Sources with several snippets are recorded as skipped and their stale per-snippet entries are removed. For an otherwise eligible source that produced no stamped root run, any old entry is removed so regeneration removes its stale CTA. Collection retries rate-limit errors with the runner policy, but collection failures are warnings and do not fail a sample suite that otherwise passed.
+
+Because `share_run` publishes a public URL, run trace refresh only for examples whose trace content is suitable for a public documentation link. The trace manifest is the state owner for those URLs; rendering is its consumer rather than an independent publisher.
 
 ## CI operations and failure handling
 

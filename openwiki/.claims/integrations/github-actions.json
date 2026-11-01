@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:4c28e3e36cea9ae5a61b4a2209f610f95322b6df7cf1aecc846b3a32a99dfcd4",
+  "pageVersion": "sha256:d3ee7ce09bd8b9cc0ef67947a6406faf02038c482bae1a01713c676d573f789b",
   "claims": [
     {
       "id": "claim_99053526ff9747f0ad0e4b02995da8c7",
@@ -84,7 +84,7 @@
         },
         {
           "resource": "repo://.github/workflows/create-preview-branch.yml#L285-L432",
-          "version": "repo-lines-v1:sha256:521194b648a7c6dcccbc10a8213a8e24d16fc35beecb8ce1044922660b7899d0:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQ4LCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI1NzZkMjViNGZkNzU0NGQ1NjRmZWM4NzhiMDU1NDE3MGU2Y2IzYTQyNWZmMzVjMmU3MDRlMWJjZWY5NWU5ZDlkIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI1NTIyYzQyY2QxOWM2ZDAzZDgwOGM0NTI3MjA1NTI4MjViN2VhMWM1YjQ5MWIyMTg1MTFjYWM3NDE1Y2Y5ZDliIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI5MTlmNjg5NzYxOWFhYWFjODEzMmUwMzU5NjA2MTRkMWM3NGJhZDA1YmM5YjJiNjM5ZDgxZjNlZTIzZDJiMTZhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
+          "version": "repo-lines-v1:sha256:b149ddec7d7cca1cdd68b9583608bfa80aed9423d420c7f11787276dcc88f0dd:eyJzZWxlY3RlZExpbmVDb3VudCI6MTMyLCJmaXJzdFNlbGVjdGVkTGluZUhhc2giOiI1NzZkMjViNGZkNzU0NGQ1NjRmZWM4NzhiMDU1NDE3MGU2Y2IzYTQyNWZmMzVjMmU3MDRlMWJjZWY5NWU5ZDlkIiwibGFzdFNlbGVjdGVkTGluZUhhc2giOiI0ZTQ2MmJkODVlYTM1MjI4MjJhOWFkM2ViMjQwOTliMDMyYTFiNjI3YmVjZmQ3YzU4MzFlOTkyN2Q0YmFjNDBlIiwicHJlY2VkaW5nQ29udGV4dExpbmVDb3VudCI6MywicHJlY2VkaW5nQ29udGV4dEhhc2giOiI5MTlmNjg5NzYxOWFhYWFjODEzMmUwMzU5NjA2MTRkMWM3NGJhZDA1YmM5YjJiNjM5ZDgxZjNlZTIzZDJiMTZhIiwiZm9sbG93aW5nQ29udGV4dExpbmVDb3VudCI6MCwiZm9sbG93aW5nQ29udGV4dEhhc2giOiJlM2IwYzQ0Mjk4ZmMxYzE0OWFmYmY0Yzg5OTZmYjkyNDI3YWU0MWU0NjQ5YjkzNGNhNDk1OTkxYjc4NTJiODU1In0"
         }
       ]
     },
@@ -223,16 +223,6 @@
       ]
     },
     {
-      "id": "claim_08cff811665b4c52ae5c582cb713f706",
-      "statement": "The PR AI-attribution workflow has no permissions, runs when a pull request is opened, edited, reopened, or synchronized, and rejects a linked Claude Code badge or Anthropic Claude co-author trailer in the PR body while directing authors to use plain-sentence disclosure.",
-      "evidence": [
-        {
-          "resource": "repo://.github/workflows/check-pr-ai-attribution.yml#L1-L38",
-          "version": "repo-lines-v1:sha256:f0210ba9bd2cf56567cec76a1f27c05a26e92732b6c6138173a0327ff959d4d0:eyJzZWxlY3RlZExpbmVDb3VudCI6MzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1MmQ3MTExMDNkNTBhNDM3ODMwYzZmYmNkMDRmYjRiYWI0OWEwZjgyZjZkMjZkMWM3OTFjNmU4NDg4ZGQwOTAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NmI4ZDAyZTMyNWEwNDQ4ODZkMThkMTA0NjZlOTlkNmE0NjViOTRkODRjYWE1ZDc5YWE3Nzg5MTY5NGUwYTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
-        }
-      ]
-    },
-    {
       "id": "claim_cca41fd6353748ad8acc3854cb0302f3",
       "statement": "The OpenAPI and weekly changelog writers use GitHub App tokens because PRs created with GITHUB_TOKEN do not automatically run pull-request workflows; both automate branch and review-PR updates rather than merging their output.",
       "evidence": [
@@ -249,10 +239,74 @@
           "version": "repo-lines-v1:sha256:3abafc9d8475ee0f03a61eb4c19253ac02860bc2cc6dbea7f64b590bc55e7d4e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1MTc0ZmQyNTVjZTU2NzBiNDc4YWYwNDZjZDQzYzY3MzRmMjA2NTljZDExMjM4NWY3NTMzMDc1ODNiZmNkZTEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVhMWMzMmU4ZjQzMDZkNTU3OTk3YzY0NTZhM2Y1M2I1YzVjZTg3ZGU5OGI5NjRkMWRkOGZkYWExMzRlZmRjNjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImIzZTI0OTk1MDQ0NTFkNTFmOWY1NDEwMmM5YzlhNGU0ZmJjNjRlNjY3NGQ4YTMwMWUzYTJmOTY4ZTAwNjdiMjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk5OTliYjU2NzBmMTRiNWRjOTk3M2I2NGJkZTlhZDA4Y2U0MTBiYWYzY2I1NmRhZmY4ZWJlZmU5NWU3YjU4NjEifQ"
         }
       ]
+    },
+    {
+      "id": "claim_9729050562614ef4999eff8afa48f3d6",
+      "statement": "The pull-request version-claim gate runs only for changed MDX or its own checker configuration, computes changed MDX files from the merge base, and invokes the package-version checker only when such files exist.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/check-version-claims.yml#L4-L58",
+          "version": "repo-lines-v1:sha256:31fb28e3c3578280387fc52e474c6f91823acb0bcb1d79f4c5f799dc783e0c52:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5NmRjNDgxNDlmNWE4M2QxZWQ2ZGJiMzliYmM3ZTJiOTAyYWEzZDM0ZDZiZDVhZTRiMjkxYjY4ZGYwY2E3OWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiZWY4NDRmYzQxMzIwOWIyMWQ2MDFjMWEwNDg1NGNmNmY4ODdjYzc0MzhkMmQ1YjYxMjAwMDY0ZDZhMDdkYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRjOWZjZGEwZjY3ODBmZTJlNzI3NDU3YmNkYzhjYTUwMWFiMjJjOWIyZmUyMTNhNjgxOTUwNzYyZDEwMGQwNjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a42d47263c63481eae91fa825faa54bd",
+      "statement": "The version-claim checker validates that documented PyPI or npm versions were published, resolves an ecosystem from package syntax and documentation context, and treats a failed registry lookup as unresolved rather than a failing invalid-version result.",
+      "evidence": [
+        {
+          "resource": "repo://scripts/check_version_claims.py#L1-L20",
+          "version": "repo-lines-v1:sha256:8641dd757b1c54cec5b6a3e29ea4e36e3f2a9db5ad55d8bc6aafb7edbaec75e9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3NmU3ZjgwZmIxNTVkNDhlZTdkMGYzZmJlMWRlNDllNmViYWNiYmE5MjE2YmIwODM0YzIwYTkxNThhMDc5ZGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEyMTgxZDAwMzYwMjA0YzM0NDdhYjk0MjEzMzgwNjc1ZmU0ZWY5OWExODEzYTcyNTA2YWE3YmRmYWRlY2M2ODYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFhYWY3NjM3Y2I2ZTdlNWRiODVkNjM0Mjc0NjAxNGRmMDQxY2NkNTU4YTkyMGIyOWViNmFjNzE5ZDdiYWY1YzIifQ"
+        },
+        {
+          "resource": "repo://scripts/check_version_claims.py#L131-L155",
+          "version": "repo-lines-v1:sha256:9356ef136e6051037a1ea35db701c6ac62bf360e598f44e8d4ef99606900dff3:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3NTQ4ODI2ZDZiZGE5MWY0NmE3MTAzZGRmOGVkMTE4MDgwZDA3NzdmMzc1OGFiMmU5YTBhOGY5MDlmMDI3MmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg0MjExMzliZjRhYjc1N2I3NWFiNjVjZjM0ODllMmExZDJjOTU1YjU0MWJlOGM3MmQ1MzVlZTQyODA3YzhkOGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MDE0OWUwNjlhZDY3ZWNjZjQ3MzY0NmZmMWM3NTAwNTBkMzI5ZDExMDAxOGRjNTc2Njg3OGVhZmExZDYwN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg1ZThkNjEwMjk3NmNmNGVkNWQ4ZTBiMmEwODBhZGZmY2JkMmI1MmQzNjg0NDRjYzZhMGU4NDg2YTEwOTM3N2UifQ"
+        },
+        {
+          "resource": "repo://scripts/check_version_claims.py#L206-L230",
+          "version": "repo-lines-v1:sha256:936e1777014d6b15e0dd24213c9320fa514184dbe6da21181448d373670cb5dd:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJlNDcyNDkzNjJlZTFjMzIwOWI1ZWQzMmUwZTFhNTIwMzgyMjI4OTZiNTEwZTM4YTU1MDJiMDhiODA4Y2FmYzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlN2M5NTdiY2I0NGZiNjczYzk4YjAwNTBhNzVkMzgwODJkYjgxZDkxOGRlMzEzYTNmMDdjMTIzNTMwNmQ3ZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0Y2JhOWFmYzAyMWM5YmNhYjliZGRhYWFmNjJkOTgyMmIyMmQxZWY4YWQyMzRlNzMyODk4ZGNkNzYyYmYyYjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEzNTNmNjgyMzdmMThlNjhmMjBjNGE3MmE5YzFlYThjOTc3MDMxNTU0ZDE0NjRkYTg4ZDU2YjY3NTlhZTZiMWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8ecd27e870214588b45cb187f957ef92",
+      "statement": "The weekly external-version workflow rewrites only registered upstream mirror claims, reuses one open refresh PR when possible, and pairs its write-capable refresh with a read-only advisory sweep for unpublished versions across all pages.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/refresh-external-versions.yml#L113-L142",
+          "version": "repo-lines-v1:sha256:78e63b277e163bca785e0bc170704191778c44293624ce1bcf353b8fb1a6ac52:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI2MjI4MDYzZjdjOGE5N2MzMzBlMzJiMDMyOWUwZjM1YWRhZTBiZDQ1OWUxZGIwY2I0N2NiMGMzNGIwM2QzYjgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3MmQzMWYyYTcxN2U5OTZhYTdlZWMwM2YwNzg0NTVmMjk4YmQwYTUxMjZjYTZiZjc2NTQ4MDU1ZDE4MzgyM2MiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjU5YzJkNTg0MTA4YzdlNzFkYTRiNGE3MDFiNTBmYTNhZDY1N2E5ZGQ0ZWYwMGY5MjEzZjMyZWZlMzY2MjI2YmMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://.github/workflows/refresh-external-versions.yml#L28-L111",
+          "version": "repo-lines-v1:sha256:6a8452dce58daaf6fbf28462e9fdb0326903dec561119419dc8e07219b1f8a3e:eyJzZWxlY3RlZExpbmVDb3VudCI6ODQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhmZDA4MzRmN2MxNDExMmNkMDE1YmZhYWJjMjAxM2I5NGM4ZmM0YTVkZmYzZGM3NGU3N2ExMWM2ZDM4Y2E5NzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQwODFhMTEwNDg0ZDdjNmFmMTY3YTU2M2RiYmI2YTcyNTJmYjA0MzEwNjU4NTk4YjIyOGVhZjZlMWU1NTdkY2EiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNmMzNiNmJmODAyYjA1N2U2YmEwOWUxZmU5NjgzNzk3NzkyMDAxYjFmOTIxNTI4YjJjZDAwMTFhMmJkNGVhOGUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRjMjhhY2IyYTNjZWVmMjlmNzY4ZGRiOGE5ZThiM2M2YTFmYjlmZjAxMTZhNWNkMWZjNDVkZDM1MDJhNTRmZjAifQ"
+        },
+        {
+          "resource": "repo://.github/workflows/refresh-external-versions.yml#L4-L18",
+          "version": "repo-lines-v1:sha256:a881036173fb1a73be3ddf1fab90e647c9463560dc4fc5779c3128ab01ea5d48:eyJzZWxlY3RlZExpbmVDb3VudCI6MTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5NmRjNDgxNDlmNWE4M2QxZWQ2ZGJiMzliYmM3ZTJiOTAyYWEzZDM0ZDZiZDVhZTRiMjkxYjY4ZGYwY2E3OWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM4OTk5MTEwM2Y2YmE4ODhlM2RlNzY1MWM1YTMwNWM3N2U1NTQ3Njc3M2FiYTgzOTU5MWVjYzViZDBmMmFiMWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNjNjc0ZDI2MjNkYTk2ODBjZjNjMjMxN2U2MzQ4ZTQyZWZjNzI4NDNjMTU2M2EzOGE0YWI4NmM4ZjU1MGM5OGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjlhN2RmMWZjYzBmMGEyYjEzOGYyMzU1YTFlZDIyZDA2MWE1YTQwMTFiYmRlMGUzMTYzM2Q3OGQyMGY3OWJhMGEifQ"
+        },
+        {
+          "resource": "repo://scripts/check_external_versions.py#L17-L20",
+          "version": "repo-lines-v1:sha256:024c617f2e609e1fa2da1fceb9d1ccedba85faed9980191f1c72250351fc3dbb:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNTdkMTQ3NjI2ZWQ0YzhhNDk2YzkyY2U0ZjJkNjMwODNkZjhjNTljZGU5YTg1MTU0NGY5YWQwMWFlYjM4M2M5OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjU1NWRkMzkwMWNmNzNmZjcwOTE4N2E0MTljYjhhNzQ5OTQxNjUwYjgwNWY0ODM4OGM4ZjZiYzIwY2ZmMTg5OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMmY2MDhlNDBlOWRjYjFkM2VmNmJhY2UzZmRjNDY2ZWI4OTljMjgwYmYyNTE2MWU2OWJlOGFkNTgyNjk0OTczYiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMWFhZjc2MzdjYjZlN2U1ZGI4NWQ2MzQyNzQ2MDE0ZGYwNDFjY2Q1NThhOTIwYjI5ZWI2YWM3MTlkN2JhZjVjMiJ9"
+        },
+        {
+          "resource": "repo://scripts/data/external_versions.yaml#L1-L21",
+          "version": "repo-lines-v1:sha256:0b228a216ad8b759f24cea2e3e0e9a743c8ce7a4da1fe4cc2fbc8c5e934f7e1c:eyJzZWxlY3RlZExpbmVDb3VudCI6MjEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjM3NDI2NzRjMDI1MzY4ODU1ZTEwZmNkZjJkMmYzNTk0ZDFjZTBmZjlkMzAwMmRiZTBlZjgxMThhYzI5YTIzODMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI3MDFhNTllZTUyZWI4ZGEwZDAwZTEyNDI4NzNhOTJjYTBkMGRhYTc4Yjk0OWFiODBhMzBhZjg3ZDQwZDUwZGIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQzM2RiMjMzOTAzYTQ0NzllZDY4NWNlNjI3YWJlNDg0MDM1NmY2YjI4Zjc4ZjlmZWUzMzZiMTE4ZTc1NjM4MjcifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_71f97e6fd634404492c0fd1e6fd9e290",
+      "statement": "The daily or manually dispatched OpenWiki writer checks out full history for incremental updates, runs OpenWiki with repository secrets supplied only as environment variables, and opens a bounded standing update PR with a GitHub App token.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/openwiki-update.yml#L3-L71",
+          "version": "repo-lines-v1:sha256:cffad052f532416ab9a4af0f5e08ed0f92d3b0bf216014c51fd3c6776fbf0c20:eyJzZWxlY3RlZExpbmVDb3VudCI6NjksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5NmRjNDgxNDlmNWE4M2QxZWQ2ZGJiMzliYmM3ZTJiOTAyYWEzZDM0ZDZiZDVhZTRiMjkxYjY4ZGYwY2E3OWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY0Nzc5NmQzMTczMmZiY2U4OTk4YTJmN2U3YjFiYjk3NTVjMjNlNTg1MDMyMGI5MDkzN2Q4MmMzZmQwZTYyYTAiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjoyLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImM1YjFmMjRlNjE4MDVlZTFhOWJjNzgwNDdlMWU0YjNkODYxNTdkNmUzN2Q4YWMwYmNiZWJkNWU2NWU1ZWYxYWEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
     }
   ],
   "verification": {
     "by": "openwiki/0.4.3",
-    "at": "2026-10-30T08:15:16.596Z"
+    "at": "2026-11-01T08:12:51.498Z"
   }
 }

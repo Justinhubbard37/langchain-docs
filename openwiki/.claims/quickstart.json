@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "pageVersion": "sha256:4ac7685ba710f17bfb7377fd419be3cef96061fbb13505e788001173d23538ac",
+  "pageVersion": "sha256:45689e68482a2d13df0064b09344d8d8a0db0b77f1741183b76b99512a3a9a50",
   "claims": [
     {
       "id": "claim_d8d8a35bd795404f8072491acc9f3276",
@@ -8,7 +8,7 @@
       "evidence": [
         {
           "resource": "repo://AGENTS.md",
-          "version": "repo-file-v1:sha256:a151a8769ebfcf66e2d6eefceb89032adf48e2533818a5aca0290c6359bac142"
+          "version": "repo-file-v1:sha256:1b9b14a1011657e70ab3a492d0a277a7a40060d2893fc19951960a6ecd0294fc"
         },
         {
           "resource": "repo://README.md#L3-L6",
@@ -76,7 +76,7 @@
       "evidence": [
         {
           "resource": "repo://AGENTS.md",
-          "version": "repo-file-v1:sha256:a151a8769ebfcf66e2d6eefceb89032adf48e2533818a5aca0290c6359bac142"
+          "version": "repo-file-v1:sha256:1b9b14a1011657e70ab3a492d0a277a7a40060d2893fc19951960a6ecd0294fc"
         },
         {
           "resource": "repo://README.md#L78-L85",
@@ -232,25 +232,91 @@
     },
     {
       "id": "claim_11160a5751074a53891eb5cdb796628d",
-      "statement": "The code-sample workflow skips fork pull requests, runs changed supported sample files for same-repository PRs, and runs all samples with tracing on scheduled or manual invocations; snippet regeneration is gated on a non-cancelled full run with fewer than 20 failures and updated traces.",
+      "statement": "The code-sample workflow skips fork pull requests, runs changed supported sample files for same-repository PRs, and runs all samples on scheduled or manual invocations. Only OSS full runs enable tracing; snippet regeneration requires a non-cancelled run with fewer than 20 failures and updated traces.",
       "evidence": [
         {
-          "resource": "repo://.github/workflows/test-code-samples.yml#L131-L179",
+          "resource": "repo://.github/workflows/test-code-samples.yml#L173-L227",
           "version": "repo-lines-v1:sha256:e3df192f2fede3f89a814c38a1e86e7724cd6cf9a3d01ecf3a5db0f9e1659fb7:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhYTZhZWY1YjUzMWRjYTFlOTBlN2JlMzQ4YjA0NjhhZjQ5YzJhYmEyZWVhYzRiN2Y3YjVkNjc4ZjhmOWY0MzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY1M2IwZWQzYWQwMmQzYjEyM2JkNjJmNjUzODk4ODM0YjQ3YzgwMDA1YWVjZTJiZmE4ZDU3NmNmMzM2OTRjZDYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjRjMmEzODE2Mjc1NGM0MjViNjA4NDIyNmUwODkxMTZjMjkwMjA1NTg1ZmUwZjA0MjhjOWE1ZGNlMzQ4MDcwZWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImExNWZlMTNiOGY0YTU5MjA3MTc2MWQzNmMxNTgxZTMxMTcxZmMyN2FkYjYwOWZlMjA4NWYxZmMxN2ZhNDk3ZmMifQ"
         },
         {
-          "resource": "repo://.github/workflows/test-code-samples.yml#L50-L80",
-          "version": "repo-lines-v1:sha256:d10e2e632ac679bf178b641d543e7a1dedf24f1e555382c5e8da30b456a0cadf:eyJzZWxlY3RlZExpbmVDb3VudCI6NjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg3YjE1MWQ5N2E3N2YwMDNiZjE4NjczNGE1ZTZiZThkMDk5ZWExMDQ3NTEzNmQyNDU0YzIzZWU0N2U5MmI2N2IiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmNTU5NzljZTczMDIwMzNlNmIyZmQ3ZDg4ZjUzN2EzYjhlMDkxZWEzMDVjODExZmZhMTI3NGJmNTc2NGVhNWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjM2MGFkNjRhNzc2N2YyNmFjNDRhMjcxNzgwN2E4NjAzYzQ5ZmQxZTAwMDE1MWZhYzgzYjk1OWE4MDBlYjAzNzEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI2NTk5MzFmMTg2OTAwYzI3YWQ0Njg0M2VkYmJhNTU4YTMyZjcyNTNlMzQ3MTZiNDEyMDhhZDEwZTNhNzdmNzEifQ"
+          "resource": "repo://.github/workflows/test-code-samples.yml#L8-L37",
+          "version": "repo-lines-v1:sha256:c536d5352d233309a3156a827338b3081b2653c6b928c030187810c937341134:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5NmRjNDgxNDlmNWE4M2QxZWQ2ZGJiMzliYmM3ZTJiOTAyYWEzZDM0ZDZiZDVhZTRiMjkxYjY4ZGYwY2E3OWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUzM2E2ZmNmMTRkYTg4ZDRhZDFiN2U4MTM5YmI5NGI0NjZmZWU1OGI1YTljN2VmNWU4ZDY3ZjQwZDI3YzcxODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE2ZjdkMzdmYjI5NzM5OWZlYTJhNWNlZjFjYzQwMjhjODk5NzlhOTA1MGE5Mjg1NmYwZDk2ZTFjMThiYTE5YTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg1MzNmMDVhZDdlZWI0ODNlZGE4MWNiYWVkNWNiNzdmNGU4MjM1MGZmMWJlNGNjNGNiZDE5NTIyMTU2OTcwZjkifQ"
         },
         {
-          "resource": "repo://.github/workflows/test-code-samples.yml#L8-L30",
-          "version": "repo-lines-v1:sha256:c536d5352d233309a3156a827338b3081b2653c6b928c030187810c937341134:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5NmRjNDgxNDlmNWE4M2QxZWQ2ZGJiMzliYmM3ZTJiOTAyYWEzZDM0ZDZiZDVhZTRiMjkxYjY4ZGYwY2E3OWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUzM2E2ZmNmMTRkYTg4ZDRhZDFiN2U4MTM5YmI5NGI0NjZmZWU1OGI1YTljN2VmNWU4ZDY3ZjQwZDI3YzcxODIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImE2ZjdkMzdmYjI5NzM5OWZlYTJhNWNlZjFjYzQwMjhjODk5NzlhOTA1MGE5Mjg1NmYwZDk2ZTFjMThiYTE5YTciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg1MzNmMDVhZDdlZWI0ODNlZGE4MWNiYWVkNWNiNzdmNGU4MjM1MGZmMWJlNGNjNGNiZDE5NTIyMTU2OTcwZjkifQ"
+          "resource": "repo://.github/workflows/test-code-samples.yml#L90-L122",
+          "version": "repo-lines-v1:sha256:a55f1f72c9771377a285e1657501a52bf8fc1a3c382ef9c3afd19b764562153f:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFjNTFlYzVhMGQ3ZmM3ZmJkOThiZWUxMzRjOTczZjQzZDRmZGM3MWIyMTU2MDFiNDkzNDhjNmQ1Mjg1OTg0NWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJmNTU5NzljZTczMDIwMzNlNmIyZmQ3ZDg4ZjUzN2EzYjhlMDkxZWEzMDVjODExZmZhMTI3NGJmNTc2NGVhNWUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImY3ZGQ2MDMwOTYxYzY2ZWRhNmQ0NjE5MzJiOGFmNjEyNTZhZTI4M2ViNDNlZjZiOTkyZDQ1YWY4NDc5MmEwZWYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImI2NTk5MzFmMTg2OTAwYzI3YWQ0Njg0M2VkYmJhNTU4YTMyZjcyNTNlMzQ3MTZiNDEyMDhhZDEwZTNhNzdmNzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2e8c0fac32fa4c7096e9fad86ef60da1",
+      "statement": "The egress IP inventory is the durable input for two LangSmith tables and is published unchanged in build output at the unversioned `/langsmith/egress-ip-addresses.json` path; its generator rewrites the inventory hash and both tables, while `--check` fails on hash or table drift.",
+      "evidence": [
+        {
+          "resource": "repo://AGENTS.md#L604-L628",
+          "version": "repo-lines-v1:sha256:326dd606e392f5f014bdfbeb889a21b7ada627da053ae4fcc92abf6af14053b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhZjBlYWZmNzc2YjhiOTg3ZGVkYzc5OTdmZGM1YWZkYzYzNDRkYmFjNmY3OGU3OWZjZjI5YzU4Y2JkYWEyNTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY1YjY4ODJkYjg1NGNlZGQ2NTc0ZjFhMDkwNTA3MDQxNjRmMDNkMDcwNGNkOTI1NzcxODg1ODAxZWNkMjJhNjMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjUzMGNiMTU2NzAxZjVhNTFhNzgwOTUxYjc2MzhmNjMzOTMzZWQyYzZhYjNhNTc3MTM3Mzc2MDI4MGFhMzJkYjYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImE3ZWZiYzFmYTE5YmYwYzQ5OWM1Yjc0OTc4ZDQzYWRkNDA4NDJlZDY5NTczNTY4YjhkYmZkNTcwMWFiYWYyZmIifQ"
+        },
+        {
+          "resource": "repo://scripts/generate_egress_ip_tables.py#L14-L20",
+          "version": "repo-lines-v1:sha256:4162d44eba65f9180db7a6840fa7b15bfd869e44995269cc433f842f462eaa92:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNzBjZWI4Y2E4ZDJjODM0ODcyODM4NjUwYWMwY2Y1YTE1MDI5OTczMzM3NmI2YTkxYjFlYjEyYTZmYTM3YzlhNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDEwODRiYTIxODQ3YjQ2NTk3NzZkMzg1ZTk0ZDk4NTM3N2E1MGVkMGJiNWRhYWY1NjQzZDFlZmYxNjc2YjBjMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzkwYzM2N2ZiYWUwYjE4YjE5NWViOGM1ZjBmNGQ5MzQ3MDU5ZWRjZjQ4ZDZlZWQ1MjUyYTEzMDQzNWUyNTEzYSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWY3N2U4ZDg2ZmM3ZTBmMTI1MmE4ODE1YjA1YzUzN2Y2Y2JkYTM2NTA1OTRlZmZmNTMwOTdhZWVjZGI4MzU1NyJ9"
+        },
+        {
+          "resource": "repo://scripts/generate_egress_ip_tables.py#L77-L106",
+          "version": "repo-lines-v1:sha256:c15da39344483fd006f90cb7ee544a073b55a5172688b46fc653eb92c9292676:eyJzZWxlY3RlZExpbmVDb3VudCI6MzAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg4NzE2Y2I3YmQ1ZWExNDBhMmVkZGU4ZDUxZTAwODUxMjZiYWI2YmMzMGQzNjhjMTZmOWEzNzAxNTAzN2QxM2YiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU5MDlhNTNhNjE4ZDAyOGUxZDMwMDBjMGE3YWJjZWVjYmU1ZmIzN2Y0ZTUxMWVmZTQ2NjQzZmFkNmU2Njg3MmYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjQ2MTgyODc5M2E2YjNmYTgzZGI5YWEzN2Y1ZjRiNmQxNmNmNWM0ODM0YWUzMjhmNTQxNDU3MWQ2NGJlYmQ4OWMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg5M2JkNjZlMmJiNzFmM2I4YTkyNDA2NGJiZjdiMDdjNTkwM2E3NzNmYTRmOGMzNTQ2MDYwMzg2NjcxZDNhNzMifQ"
+        },
+        {
+          "resource": "repo://tests/unit_tests/test_egress_ip_inventory.py#L80-L89",
+          "version": "repo-lines-v1:sha256:4ed48866c2f5bd43f31c9bec3665beeaa24e7f2cf08245521b7922b8dc68f423:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNmY2JlZmEwYjkxMWZhYjJkZmQ5MzBjOTljM2RlYTZiYTk3MDg4NTQwNDViMjNlZGZiNmFmM2FmZWU4MTRhODYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkMDcyOTUwZDk0MWI5MDMwMjVkMjI3NjdhOGIzMDEyNTU4ODdlY2ZjYzA2MDJiMTNkMTUwZmYzM2UwNmJlODEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJiMTg4MWY1NDhmZjRmYjdhMmM1N2ZkZGY5Y2ZmNzk4NDFmNzU4ZjY3YjJjYzMyY2UwNmUzNTNlMTAyNGQ3MjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_d41689ddfd344067bd764e6ce686be27",
+      "statement": "The pull-request version-claim workflow checks changed MDX files for package versions named with `>=` or `==`. It resolves the package registry from syntax and language context, fails only when a named version was never published, and treats registry lookup failures as unresolved rather than failing the check.",
+      "evidence": [
+        {
+          "resource": "repo://.github/workflows/check-version-claims.yml#L4-L58",
+          "version": "repo-lines-v1:sha256:31fb28e3c3578280387fc52e474c6f91823acb0bcb1d79f4c5f799dc783e0c52:eyJzZWxlY3RlZExpbmVDb3VudCI6NTUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU5NmRjNDgxNDlmNWE4M2QxZWQ2ZGJiMzliYmM3ZTJiOTAyYWEzZDM0ZDZiZDVhZTRiMjkxYjY4ZGYwY2E3OWEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImNiZWY4NDRmYzQxMzIwOWIyMWQ2MDFjMWEwNDg1NGNmNmY4ODdjYzc0MzhkMmQ1YjYxMjAwMDY0ZDZhMDdkYjciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImRjOWZjZGEwZjY3ODBmZTJlNzI3NDU3YmNkYzhjYTUwMWFiMjJjOWIyZmUyMTNhNjgxOTUwNzYyZDEwMGQwNjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://scripts/check_version_claims.py#L1-L20",
+          "version": "repo-lines-v1:sha256:8641dd757b1c54cec5b6a3e29ea4e36e3f2a9db5ad55d8bc6aafb7edbaec75e9:eyJzZWxlY3RlZExpbmVDb3VudCI6MjAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImE3NmU3ZjgwZmIxNTVkNDhlZTdkMGYzZmJlMWRlNDllNmViYWNiYmE5MjE2YmIwODM0YzIwYTkxNThhMDc5ZGYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjEyMTgxZDAwMzYwMjA0YzM0NDdhYjk0MjEzMzgwNjc1ZmU0ZWY5OWExODEzYTcyNTA2YWE3YmRmYWRlY2M2ODYiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFhYWY3NjM3Y2I2ZTdlNWRiODVkNjM0Mjc0NjAxNGRmMDQxY2NkNTU4YTkyMGIyOWViNmFjNzE5ZDdiYWY1YzIifQ"
+        },
+        {
+          "resource": "repo://scripts/check_version_claims.py#L131-L155",
+          "version": "repo-lines-v1:sha256:9356ef136e6051037a1ea35db701c6ac62bf360e598f44e8d4ef99606900dff3:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjU3NTQ4ODI2ZDZiZGE5MWY0NmE3MTAzZGRmOGVkMTE4MDgwZDA3NzdmMzc1OGFiMmU5YTBhOGY5MDlmMDI3MmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg0MjExMzliZjRhYjc1N2I3NWFiNjVjZjM0ODllMmExZDJjOTU1YjU0MWJlOGM3MmQ1MzVlZTQyODA3YzhkOGMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImQ3MDE0OWUwNjlhZDY3ZWNjZjQ3MzY0NmZmMWM3NTAwNTBkMzI5ZDExMDAxOGRjNTc2Njg3OGVhZmExZDYwN2QiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijg1ZThkNjEwMjk3NmNmNGVkNWQ4ZTBiMmEwODBhZGZmY2JkMmI1MmQzNjg0NDRjYzZhMGU4NDg2YTEwOTM3N2UifQ"
+        },
+        {
+          "resource": "repo://scripts/check_version_claims.py#L206-L230",
+          "version": "repo-lines-v1:sha256:936e1777014d6b15e0dd24213c9320fa514184dbe6da21181448d373670cb5dd:eyJzZWxlY3RlZExpbmVDb3VudCI6MjUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImJlNDcyNDkzNjJlZTFjMzIwOWI1ZWQzMmUwZTFhNTIwMzgyMjI4OTZiNTEwZTM4YTU1MDJiMDhiODA4Y2FmYzQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVlN2M5NTdiY2I0NGZiNjczYzk4YjAwNTBhNzVkMzgwODJkYjgxZDkxOGRlMzEzYTNmMDdjMTIzNTMwNmQ3ZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijc0Y2JhOWFmYzAyMWM5YmNhYjliZGRhYWFmNjJkOTgyMmIyMmQxZWY4YWQyMzRlNzMyODk4ZGNkNzYyYmYyYjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImEzNTNmNjgyMzdmMThlNjhmMjBjNGE3MmE5YzFlYThjOTc3MDMxNTU0ZDE0NjRkYTg4ZDU2YjY3NTlhZTZiMWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_2684b54386ed469b9471f7fce441478a",
+      "statement": "Agent-based workspace documentation is configured in `src/docs.json` under LangSmith setup and describes an agent as the trace-addressing unit; each trace belongs to one agent and one fixed environment, and agent identifiers remain stable when display names change.",
+      "evidence": [
+        {
+          "resource": "repo://src/docs.json#L2225-L2252",
+          "version": "repo-lines-v1:sha256:23d0598334555ce653295f4a40c1bec2d8b3155b42d6c7d86c29c6baf91b8567:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM0MmVmMGQyN2EyZTUwMzMwNjkzY2MyMWRmNWZkZjAyMjMyY2RlOWRlODA3MWVhM2JlMDQ3OWRjN2JlM2ZlNDciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjZjNGYwNjU4ZTI1M2VkZDkzMTg0NTY1NWI4YmY5NzYxMDdjMzgxZWJjMmYyNjc3YjVkOWM2NjZiZWY2ZjUxZWMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjFjZmI4ZTFlMjNjZTIyNDBkNDMzZDVmZWI2NjdjZTkyY2ZiZTYwZTY4NWI5NmYzODFmZjA3YTE5ZmQzMmZiMGMiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijk0YjE5OTNlNDVmMDc0NjJjMmJjYWI2ZTgxODNiYTYxY2IyY2I1OGE0YzE2NGRlZTI5ZTQ2NzUzMDZkMTEwOTcifQ"
+        },
+        {
+          "resource": "repo://src/langsmith/agent-registry.mdx#L12-L23",
+          "version": "repo-lines-v1:sha256:f56c34024695b8202c06b2b03a5aab1e8a5f3c5ba49baa48bad8b510c7298a54:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImFiYmJiNjJlMGJmYTE4ZjhiNjc4Y2VjOTJiODhlYzU4MTUxNjIwM2I2ZjljMmUxNGQ5ZmMwNjgxY2E0ZGNmNmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUwNDg2OWU3MGQxNWU5NTM5NDgzZTgzNjhkMzIzMDhhNWZkZTAwNzBmMzliNzAxMWU4MDgzOWZkNzY5YWQzNWQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImMyNDAzMzE3MTg2ZmNmYzRlZDdiNzk1NWJlNWY2NTFkNjNiNzQxZmU4MzJhZGI1ZTZiNjFiYzVkNDNhNDIyODIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjRiNWFkOWNiYWYyZmQ0ZDExYTc2ZjE2ZTMxMWQ4N2ZjM2M4NzFiOTY5NTE2NjVjNDU2MjlhMmI2YzA5NGNiNjAifQ"
+        },
+        {
+          "resource": "repo://src/langsmith/agent-registry.mdx#L40-L44",
+          "version": "repo-lines-v1:sha256:75f3e9d7d426055fff27ea76eb2389e25a286e98d75349dc0cfbc20531d3a916:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZTNkOWVkZjA1NzNiNzdjNjg2YzM5ODNmZDdjZjYxYjBhOTQ5ZDA4YzIyNTRjNTU5NjY0ZmQ0N2FiZmMyYTljYiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmFhMTRmYTc2ODM2NDAzZWZmMjAxZGQ3OWM3ZGE1MjU2NzZlNTM2ZDdiMTE5MjUzODY3MzQ0Y2U1NjY1NDFkNSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTg1ZDVhZGU5ZDFmYzNlOGNmNjFlZjgzOTcyMzllOTQwNTBkMmRlYTY0OGQxNjlkN2YyZTU2MzRmYWRlZDc5YiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZjJkN2VkMDRmMDc0YjMxZjE0MjMyMGMyMjRmNWIzMmQ4NTU5Zjg2Y2ZhODIyYTQ0YWNkOWZiMDk4NTdhZDkxYiJ9"
+        },
+        {
+          "resource": "repo://src/langsmith/agent-registry.mdx#L71-L78",
+          "version": "repo-lines-v1:sha256:9aa4fed46ae85a096fef9c3be0a1efeaa6f7fdecfc219b74d8f2f8931e97e4ed:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiN2UxZmVkOTA2M2U2ODZkZWViMTljYTgyNmVkYjM3OTJjOTNjYzNlMGQ0Yjg0Mjk0NzllZDg5NGNlYjk0ZDY0ZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMjNlNWMwZmRkMTAwOGI4MGEzMWJjOGNiMzkxNmQ3NTY5MTA0YmE0Y2U4ODIzN2JmOWFlM2YwNmY0NjQyMmI1ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODk0ZWY3NjNhNjk0ZTFmMDQ4OWNkMzY4ODdiYjEzMjRkNjkyYWRmY2RhMGU4OWFkNDA4NWIxODE0YzU3M2JmNCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMjc0NmEwNTBmYjBiYTUyYTk3M2VlMDQ2M2Q3ZmZhMjk3YTE1NTVkNTIzYmU3OWUxZjEzZjVhODIzNjliNWIxYSJ9"
         }
       ]
     }
   ],
   "verification": {
     "by": "openwiki/0.4.3",
-    "at": "2026-10-30T08:15:16.596Z"
+    "at": "2026-11-01T08:12:51.498Z"
   }
 }

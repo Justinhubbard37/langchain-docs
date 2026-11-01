@@ -1,70 +1,41 @@
 ---
 type: validation guide
 title: Testing Overview
-description: Select validation by the contract a documentation change affects. Deterministic local checks cover transformations and generated output, while CI-only checks cover credentials, services, and external destinations.
+description: Select validation by the contract a documentation change affects. Deterministic local checks prove transformations and generated artifacts, while registry, hosted, credentialed, and deployment checks prove only their respective external boundaries.
 tags: [testing, validation, ci, documentation, code-samples]
-sources:
-  - id: openwiki-source-5c124605ed6e394bffee862c
-    resource: repo://.github/workflows/_check-links.yml
-  - id: openwiki-source-164e2da859b5277df81c7d94
-    resource: repo://.github/workflows/ci.yml
-  - id: openwiki-source-97746d8f3662d803e625550e
-    resource: repo://.github/workflows/test-code-samples.yml
-  - id: openwiki-source-ded8a20999ec9d794fa86ab9
-    resource: repo://docs-release-watch/tests/test_evidence.py
-  - id: openwiki-source-71ee7a4afbd2d6aa7b29f3d1
-    resource: repo://htmltest-mint-export.yml
-  - id: openwiki-source-012f2c78e3b1446dfc35803f
-    resource: repo://Makefile
-  - id: openwiki-source-d0cdf44431684bdedf34705a
-    resource: repo://pipeline/core/builder.py
-  - id: openwiki-source-05ccef8d4cf1698187f20464
-    resource: repo://pyproject.toml
-  - id: openwiki-source-0a0a6c8d7a88288e6b6b9b5b
-    resource: repo://scripts/check_cross_refs.py
-  - id: openwiki-source-2654e40275744504b4ca7e2b
-    resource: repo://scripts/code_sample_tracing.py
-  - id: openwiki-source-fd0cb9d6fca56bf4963559e9
-    resource: repo://scripts/extract_code_snippets.py
-  - id: openwiki-source-560bf24db9566b97ee19e383
-    resource: repo://scripts/generate_code_snippet_mdx.py
-  - id: openwiki-source-63d8ba810a7c0181c548a307
-    resource: repo://scripts/refresh_integration_downloads.py
-  - id: openwiki-source-2b15ecffacad911ef9db112f
-    resource: repo://scripts/test_code_samples.py
-  - id: openwiki-source-11d4965febd3986495e06a17
-    resource: repo://src/code-samples/langsmith/create-an-agent.py
-  - id: openwiki-source-a9a8730b7e43a5ad2d0af4f1
-    resource: repo://src/docs.json
-  - id: openwiki-source-5d310b0d0e3f7a2baf5a473a
-    resource: repo://tests/changelog-navigation.test.js
-  - id: openwiki-source-24e5f74f0f40e9bfd381871f
-    resource: repo://tests/unit_tests/test_builder.py
-  - id: openwiki-source-b68d7bad2afd9a38e8c331d5
-    resource: repo://tests/unit_tests/test_generate_code_snippet_mdx.py
-  - id: openwiki-source-7be0fdefc402d868b9f2fdca
-    resource: repo://tests/unit_tests/test_refresh_integration_downloads.py
-  - id: openwiki-source-b631fb59f417cefbd356f03e
-    resource: repo://tests/unit_tests/test_test_code_samples.py
-  - id: openwiki-source-98a4de3472710de1bf3ccb4f
-    resource: repo://tests/unit_tests/test_url_stub_noindex.py
-generated: { by: "openwiki/0.4.3", at: "2026-10-30T08:15:16.596Z" }
 verified:
   - by: openwiki/0.4.3
-    at: 2026-10-30T08:15:16.596Z
+    at: 2026-11-01T08:12:51.498Z
+sources:
+  - id: openwiki-source-21617d8a6b2b570989a7c900
+    resource: repo://.github/workflows/check-version-claims.yml
+  - id: openwiki-source-99b53585619b83f258314f8b
+    resource: repo://scripts/check_version_claims.py
+  - id: openwiki-source-d22c99c9d9abf854bbf1a047
+    resource: repo://scripts/generate_egress_ip_tables.py
+  - id: openwiki-source-607673c5c40214b511f9e0a7
+    resource: repo://tests/unit_tests/test_check_version_claims.py
+  - id: openwiki-source-30a490be0964e690a58135e7
+    resource: repo://tests/unit_tests/test_egress_ip_inventory.py
+  - id: openwiki-source-71e085db64c5296fd9b80141
+    resource: repo://tests/unit_tests/test_otel_endpoints.py
+generated: { by: "openwiki/0.4.3", at: "2026-11-01T08:12:51.498Z" }
 ---
 
 ## Choose the smallest meaningful boundary
 
-Each layer proves a different contract. Start with the focused unit test or static check for the code or source convention changed. Add generated-site validation when a change can affect routes, imports, redirects, anchors, navigation, or OpenAPI input. Run credentialed samples only when an example crosses a provider or service boundary. A unit-test pass does not prove a rendered site, a reachable external URL, or a provider integration; a live run does not replace deterministic assertions about a transformation.
+Each layer proves a different contract. Start with the focused unit test or static check for the code or source convention changed. Add generated-site validation when a change can affect routes, imports, redirects, anchors, navigation, or OpenAPI input. Use a registry check for a claim about publication, and credentialed samples only when an example crosses a provider or service boundary. A unit-test pass does not prove a rendered site, a reachable external URL, a published package, or a provider integration; a live run does not replace deterministic assertions about a transformation.
 
 ### Validation matrix
 
-| Change | Deterministic local check | Secret- or service-dependent CI check | Boundary proved |
+| Change | Deterministic local check | External or CI-only evidence | Boundary proved |
 | --- | --- | --- | --- |
-| Python pipeline, parser, builder, or generator | The owning `tests/unit_tests/test_*.py`, then `make test` for a wider change | None normally | Fixture-controlled transformation behavior, not remote services. |
+| Python pipeline, parser, builder, or generator | Owning `tests/unit_tests/test_*.py`, then `make test` for a wider change | None normally | Fixture-controlled transformation behavior, not remote services. |
 | Formatting, types, spelling, or prose style | `make lint`; `make lint_prose FILES="src/..."` | None | Static quality or Vale style, not rendering, factual correctness, or runtime behavior. |
 | `@[Name]` cross-reference and language scope | `make check-cross-refs` | None | Source references resolve in applicable scopes, not final route reachability. |
+| Package `>=` or `==` claim in an MDX page | `make test TEST_FILE=tests/unit_tests/test_check_version_claims.py` for parser/routing changes | PR version-claim workflow, or a network-enabled direct checker run | A named release exists in PyPI or npm; it does not establish that a floor is the right feature floor. |
+| Egress IP inventory or its two rendered tables | `make test TEST_FILE=tests/unit_tests/test_egress_ip_inventory.py`; run `python scripts/generate_egress_ip_tables.py --check` | Standard test CI runs the focused invariant as part of `make test` | Inventory schema, content-derived version, and generated tables agree; it does not validate live network egress. |
+| OTLP endpoint documentation or exporter setup | `make test TEST_FILE=tests/unit_tests/test_otel_endpoints.py` | None | Source-wide endpoint syntax and mocked exporter URL construction, not delivery to the hosted endpoint. |
 | Authored route, redirect, navigation, anchor, or Agent Server OpenAPI input | `make broken-links-with-anchors`; `make check-openapi` | Hosted-preview checks only when deployment behavior matters | Freshly generated Mint tree, including routes, redirects, and anchors; not a deployed site. |
 | Snippet markers, extraction, model-tab expansion, or generated snippet MDX | Focused generator test, then `make code-snippets` and review the diff | None | Extractor/generator consistency; samples are not executed. |
 | Integration `docs_url` or provider overview | `uv run python scripts/refresh_integration_downloads.py --check-docs-urls`; regenerate the overview | CI generated-file diff | Safe URL shapes or that generated output is committed, not remote URL availability. |
@@ -77,14 +48,16 @@ flowchart TD
   Change["Change"] --> Focused["Focused deterministic check"]
   Focused --> Generated{"Changes generated output"}
   Generated -->|"yes"| Mint["Build and Mint validation"]
-  Generated -->|"no"| Service{"Calls a provider or service"}
-  Mint --> Service
-  Service -->|"yes"| Credentialed["Credentialed CI sample run"]
-  Service -->|"no"| Review["Review result"]
+  Generated -->|"no"| External{"Needs an external boundary"}
+  Mint --> External
+  External -->|"registry"| Registry["Published-version check"]
+  External -->|"service"| Credentialed["Credentialed CI sample run"]
+  External -->|"neither"| Review["Review result"]
+  Registry --> Review
   Credentialed --> Review
 ```
 
-*Validation expands from the changed deterministic contract to generated output and then to remote boundaries only when the change requires it.*
+*Validation expands from the changed deterministic contract to generated output and then to a registry or remote service only when the change requires that evidence.*
 
 ## Deterministic checks
 
@@ -96,9 +69,33 @@ The LangSmith `create-an-agent.py` sample deliberately provides such a boundary.
 
 The main CI workflow runs reusable test, lint, and documentation-link workflows on pull requests, pushes to `main`, and manual dispatch. It also separately checks merge markers, source cross-references, integration `docs_url` values, and generated provider-overview drift. Repair the failed boundary instead of substituting a broader but less relevant check.
 
+### Published-version claims are an external boundary
+
+The version-claim checker deliberately answers a narrow question: whether a `>=` or `==` version written in an MDX page was ever published. It does **not** decide whether a minimum should be raised, whether a feature actually landed in that version, or whether the dependency resolves with the rest of an installation.
+
+It discovers specifiers in `src` MDX, tracks `:::python` and `:::js` fences, and selects PyPI or npm using strongest available evidence: scoped-package syntax, extras syntax, the nearest language label, fence, page path, then a Python default. It accepts a shortened release series when a published release has that dotted prefix. The focused tests protect ambiguous names such as `deepagents`, where Python and npm have divergent version lines, as well as fence closure, labels, path routing, ignore entries, and unsafe package names.
+
+Registry lookup is intentionally not a deterministic test. The checker uses allowlisted package names to fetch registry JSON concurrently; an unavailable registry, private package, malformed payload, or timeout is reported as unresolved rather than as an invalid claim. A resolved package whose named version is absent fails, unless its exact specifier is a documented exception in `scripts/version_claims_ignore.cfg`.
+
+The separate **Check version claims** PR workflow runs only when MDX documentation or its own implementation/configuration changes. It computes changed MDX files against the PR base and avoids Python setup when none changed; otherwise it runs the checker only for that changed set. Run `uv run python scripts/check_version_claims.py --files src/path/page.mdx` locally when network access is appropriate, but interpret it as registry evidence rather than a hermetic gate.
+
+### Generated egress inventory
+
+`src/langsmith/egress-ip-addresses.json` is the source of truth for public egress addresses. `scripts/generate_egress_ip_tables.py` validates the complete schema before rendering: schema version 1, a nonempty version and address array, exactly the expected fields, known service/cloud/region values, and unique globally routable IPv4 `/32` CIDRs. It produces tables only for the two owning LangSmith pages and requires exactly one generated block in each.
+
+The inventory `version` is a SHA-256 of canonicalized address content, not author-maintained release metadata. The generator derives it and replaces the marked blocks when run normally. With `--check`, it changes nothing and fails if either the content hash or a rendered table differs, naming stale files and directing the author to rerun the generator. Update the inventory and regenerate; do not edit a table as an independent source.
+
+The focused egress test copies the real inventory and pages into a temporary tree, proves both inventory and table drift fail in check mode, proves regeneration restores agreement, rejects invalid or duplicate entries, and confirms a full `DocumentationBuilder` build publishes the inventory bytes once at the unversioned `langsmith/egress-ip-addresses.json` artifact. This establishes generated-artifact consistency, not that a cloud deployment currently originates traffic from those IPs.
+
+### OTLP documentation invariants
+
+The OTLP suite has two deterministic layers. It scans every source MDX page and rejects a generic `OTEL_EXPORTER_OTLP_ENDPOINT` that already contains `/v1/traces`, `/v1/metrics`, or `/v1/logs`; it also rejects collector exporter YAML that uses `endpoint:` with a `/v1/traces` suffix instead of `traces_endpoint:`. These are documentation-wide syntax invariants rather than checks limited to a single example.
+
+The same suite instantiates the HTTP `OTLPSpanExporter` with a mocked session. It verifies that `OTEL_EXPORTER_OTLP_TRACES_ENDPOINT` is used verbatim, while the generic base endpoint receives exactly one `/v1/traces` suffix, and asserts the mocked request target is never doubled. This tests SDK endpoint construction without contacting `api.smith.langchain.com`; it cannot prove credentials, ingestion, or hosted collector availability.
+
 ### Generated documentation and navigation
 
-`DocumentationBuilder.build_all()` reconstructs the generated tree with Python and JavaScript OSS variants, unversioned Deep Agents Code and OpenWiki content, Managed Deep Agents language variants, shared assets, and npm snippet components. Its Markdown processing rewrites language-sensitive links and snippet imports before output is written. Focused builder tests protect generated navigation topology: language-prefix rewriting, a single unversioned OpenWiki output, language-scoped snippet imports, and rejection of source symlinks so collection cannot copy content outside the source tree.
+`DocumentationBuilder.build_all()` reconstructs the generated tree with Python and JavaScript OSS variants, unversioned Deep Agents Code and OpenWiki content, Managed Deep Agents language variants, shared assets, and npm snippet components. Its Markdown processing rewrites language-sensitive links and snippet imports before output is written. Focused builder tests protect generated navigation topology: language-prefix rewriting, a single unversioned OpenWiki output, language-scoped snippet imports, and rejection of source symlinks so build collection cannot copy content outside the source tree.
 
 `make check-cross-refs` validates source `@[ref]` markers by scanning Markdown and MDX under `src`, skipping code fences, escaped references, generated code-sample snippets, and `node_modules`; unfenced shared OSS references must resolve in every applicable language scope. It is narrower than a site build and cannot prove a final route, redirect, fragment, or external destination.
 
@@ -154,7 +151,9 @@ The changelog-navigation Node tests use an in-memory DOM to verify that the self
 
 ## Failure triage
 
-- **Focused unit or fixture failure:** correct the transformation, fixture schema, request assertion, or SDK usage. Do not diagnose a loopback fixture as a production credential failure.
+- **Focused unit or fixture failure:** correct the transformation, fixture schema, request assertion, or SDK usage. Do not diagnose a loopback fixture or mocked OTLP request as a production credential failure.
+- **Version-claim failure:** first distinguish an unpublished version from an unresolved registry lookup. Correct the former; do not use the ignore file to bypass a typo or use the check to choose a newer minimum version.
+- **Egress check failure:** repair the inventory entry or generated-block drift, run `python scripts/generate_egress_ip_tables.py`, and commit both source-of-truth and derived changes.
 - **Generator test or generated diff:** repair marker syntax, extractor/generator logic, source conventions, or the owning metadata, then regenerate and review derived files.
 - **Mint or cross-reference failure:** inspect regenerated `build/`, route ownership, redirects, snippet imports, and fragments. Source-map and generated-site checks prove different invariants.
 - **Credentialed sample failure or skip:** distinguish a nonzero program failure from an exhausted rate-limit skip, then inspect credentials, provider behavior, PostgreSQL readiness, and the selected toolchain. A skip is not a pass.

@@ -43,7 +43,7 @@ sources:
 generated: { by: "openwiki/0.4.3", at: "2026-10-30T08:15:16.596Z" }
 verified:
   - by: openwiki/0.4.3
-    at: 2026-10-30T08:15:16.596Z
+    at: 2026-11-01T08:12:51.498Z
 ---
 
 # Reference Documentation Boundaries
